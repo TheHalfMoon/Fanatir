@@ -4,7 +4,7 @@
 
 **Created**: 2026-07-23
 
-**Status**: Clarified (founder decisions Q1-Q9 ratified 2026-07-23; uncommitted)
+**Status**: Accepted (founder decisions Q1-Q9 ratified 2026-07-23; acceptance commit `46f55c4`)
 
 **Input**: User description: "Create the product and repository reconstitution specification for the Fanatir ecosystem — audit current Fanatir repository, reconcile AFIA/Fanatir identity conflicts, classify assets, define target topology and cross-repo boundaries, Founder Alpha scope, migration sequence, and acceptance gates before feature implementation."
 
