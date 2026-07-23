@@ -2,17 +2,16 @@
 
 ## Authorized next action
 
-Create the Spec Kit feature specification for repository and architecture
-reconstitution:
+Specification 001 is founder-accepted. After the local acceptance commit is clean, run:
 
 ```text
-/speckit-specify 001-fanatir-repository-and-architecture-reconstitution
+/speckit-plan
 ```
 
-If the local Cursor skill surface uses the dotted form, equivalent intent:
+Active feature directory:
 
 ```text
-/speckit.specify 001-fanatir-repository-and-architecture-reconstitution
+specs/001-fanatir-repository-and-architecture-reconstitution
 ```
 
 ## Not authorized yet
@@ -21,5 +20,7 @@ If the local Cursor skill surface uses the dotted form, equivalent intent:
 - `/speckit-implement`
 - OpenMed or Graphify import/fork execution
 - Fehrest or DeepMed-AI initialization beyond planning
+- Package rename, file moves/deletions for migration
+- UI redesign or auth/session behavior changes
+- Pictorial or Montada activation
 - Pushing branches or opening pull requests
-- Changing Pictorial or Montada frozen status
