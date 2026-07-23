@@ -2,13 +2,15 @@
 
 ## Authorized next action
 
-**T001 complete** (evidence: `docs/program-memory/baseline/R0-repo-baseline.md`).
+**T002 complete** (evidence: `docs/program-memory/baseline/R0-build-commands.md`).
 
 Next eligible task (do **not** auto-execute unless requested):
 
 ```text
-T002 — Verify actual build/dev commands for afia-ui and record evidence
+T003 — Verify dependency managers (pnpm/node/rust/python/uv) and versions
 ```
+
+Dependencies for T003: **T001** (per tasks.md).
 
 ## Hard gates (unchanged)
 
@@ -20,6 +22,7 @@ T002 — Verify actual build/dev commands for afia-ui and record evidence
 
 ## Not authorized yet
 
+- Installing `afia-ui` dependencies (explicitly withheld in T002)
 - Blanket `/speckit-implement`
 - OpenMed or Graphify fork/import
 - Specification 002 implementation
