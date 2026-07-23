@@ -8,6 +8,19 @@
 
 **Input**: User description: "$ARGUMENTS"
 
+## Constitution Constraints *(mandatory)*
+
+Specs MUST align with `.specify/memory/constitution.md` (v1.0.0+):
+
+- Stay within ratified product-space status and repository boundaries.
+- Require Spec Kit traceability; do not authorize implementation from chat alone.
+- Declare data classification / PHI posture when healthcare or patient data is in scope.
+- Preserve Artifact/Run/provenance; forbid treating AI summaries as original sources.
+- Keep AI/clinical tooling assistive; no silent clinical approval or fabricated mappings.
+- Route models/MCP/plugins through Capability Gateway requirements when applicable.
+- Use only evidenced compliance language (no unearned HIPAA/clinical/hospital-ready claims).
+- Record unresolved founder decisions explicitly rather than inventing authority.
+
 ## User Scenarios & Testing *(mandatory)*
 
 <!--

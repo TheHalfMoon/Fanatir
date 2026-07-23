@@ -21,10 +21,25 @@ description: "Task list template for feature implementation"
 
 ## Path Conventions
 
+- Prefer concrete paths from the active `plan.md` (Fanatir monorepo may use
+  `afia-ui/`, `lib/`, `apps/`, `services/`, `docs/`, etc.).
+- Do not assume a generic `src/` layout unless the plan adopts it.
+- Cross-repo work affecting Fehrest or DeepMed-AI MUST be split into
+  repository-bounded tasks with explicit contracts.
 - **Single project**: `src/`, `tests/` at repository root
 - **Web app**: `backend/src/`, `frontend/src/`
 - **Mobile**: `api/src/`, `ios/src/` or `android/src/`
 - Paths shown below assume single project - adjust based on plan.md structure
+
+## Constitution-Driven Task Categories
+
+When relevant to the feature, include explicit tasks for:
+
+- Security/privacy classification and no-PHI logging checks
+- Provenance / Artifact / Run evidence
+- Capability Gateway declarations for models, MCP, or plugins
+- Independent review for clinical, interoperability, or architecture-sensitive work
+- Program-memory closeout (`CURRENT-STATE`, `NEXT-ACTION`, decisions)
 
 <!--
   ============================================================================

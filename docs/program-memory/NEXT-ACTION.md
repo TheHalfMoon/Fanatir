@@ -2,19 +2,24 @@
 
 ## Authorized next action
 
-Run Spec Kit constitution authoring in the Fanatir repository:
+Create the Spec Kit feature specification for repository and architecture
+reconstitution:
 
 ```text
-/speckit.constitution
+/speckit-specify 001-fanatir-repository-and-architecture-reconstitution
 ```
 
-Installed Cursor skill folder name: `speckit-constitution` (invoke via Cursor Spec Kit skill UI / `/speckit-constitution` if that is how the local Cursor build surfaces skills).
+If the local Cursor skill surface uses the dotted form, equivalent intent:
+
+```text
+/speckit.specify 001-fanatir-repository-and-architecture-reconstitution
+```
 
 ## Not authorized yet
 
 - Product feature implementation
-- `/speckit.implement` / `/speckit-implement`
-- DeepMed, Fehrest, commandF, Studio, CoLab, or Lab implementation
-- Importing or forking OpenMed
-- Importing or forking Graphify into Fehrest
+- `/speckit-implement`
+- OpenMed or Graphify import/fork execution
+- Fehrest or DeepMed-AI initialization beyond planning
 - Pushing branches or opening pull requests
+- Changing Pictorial or Montada frozen status

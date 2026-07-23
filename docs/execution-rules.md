@@ -1,8 +1,16 @@
 # AFIA Execution Rules (Hard Constraints)
 
-This file defines the ONLY allowed behavior for AI-assisted code changes in this repository.
+> **Authority notice:** This file is hierarchy level 7 under the Fanatir
+> Constitution (`.specify/memory/constitution.md`). It does **not** outrank the
+> Constitution, founder decisions, accepted ADRs, or active Spec Kit
+> specification/plan/tasks. Conflicting AFIA wording below is subordinate.
 
-Any violation of these rules is considered a broken build, even if the code compiles.
+This file defines module-isolation constraints for AI-assisted code changes in
+currently existing clinical-module paths.
+
+Any violation of these module rules is considered a broken build for those paths,
+even if the code compiles, unless a higher-authority Spec Kit artifact and ADR
+explicitly supersede them.
 
 ---
 
@@ -137,11 +145,13 @@ Adding a new module requires:
 Full copy-paste template: [AGENTS.md](../AGENTS.md#executor-prompt-use-this-every-time)
 
 ```text
-Follow the execution rules in this repository.
+Follow the Fanatir Constitution first, then these module execution rules.
 
 Primary authority:
-- docs/execution-rules.md (highest priority)
-- AGENTS.md (secondary reference)
+- .specify/memory/constitution.md (highest)
+- active Spec Kit specification / plan / tasks
+- docs/execution-rules.md (module constraints for existing code only)
+- AGENTS.md
 
 <<< TASK START >>>
 
@@ -151,9 +161,9 @@ PUT YOUR TASK HERE
 
 Rules:
 - Make minimal changes only
-- Do not change architecture
-- Do not add new features
-- Do not create new files unless strictly required
+- Do not change founder-ratified scope implicitly
+- Do not invent compliance or clinical claims
+- Do not create new files unless required by an accepted task
 - Ensure build + type-check + lint remain valid
 - If anything is unclear, stop and explain instead of guessing
 

@@ -1,14 +1,19 @@
-# AFIA
+# AFIA / Fanatir
 
-> Skeleton only. No implementation. This repository is being scaffolded from the
-> **AFIA v1 Engineering Program** (governing standard: *AFIA Master Product & Engineering Blueprint v1.0*).
-> Implement the standard. Do not redesign it.
+> **Authority notice:** The founder-ratified Fanatir Constitution at
+> `.specify/memory/constitution.md` is the governing authority. Legacy AFIA
+> README claims below are historical evidence only and MUST NOT override the
+> Constitution. Package name `afia` remains an unresolved migration detail.
+> Desktop host statements below are not proof of current implementation.
 
-AFIA is a macOS Apple Silicon desktop application. Rust is the authoritative
-application, workspace, document, search, storage, security, plugin-interface, and
-RAG-orchestration layer. A bounded Go operations service owns jobs, downloads, model
-lifecycle, scheduling, and Python supervision. A managed Python runtime performs AI
-execution only.
+> Skeleton / mixed-era repository. Reconstitution is required before treating
+> legacy blueprint text as binding architecture.
+
+Legacy description retained for audit evidence: AFIA was described as a macOS
+Apple Silicon desktop application with Rust as an authoritative host layer, a
+bounded Go operations service, and a managed Python AI runtime. Those claims are
+targets or historical intent unless re-accepted through Spec Kit and ADRs under
+the Fanatir Constitution.
 
 ## Monorepo layout
 

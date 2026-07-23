@@ -40,7 +40,15 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ] Traceable to an accepted Spec Kit specification and this plan (Constitution II)
+- [ ] Does not begin from informal chat alone; acceptance criteria and verification method are defined
+- [ ] Respects repository boundaries (Fanatir / Fehrest / DeepMed-AI) and does not import OpenMed or Graphify without a dedicated spec
+- [ ] Honors product-space status (active vs frozen: Pictorial/Montada remain frozen)
+- [ ] Declares data classification, PHI posture, and Capability Gateway needs when models/tools/integrations are involved
+- [ ] Preserves Artifact/Run/provenance requirements for durable results
+- [ ] Keeps clinical/AI outputs assistive; no silent clinical approval or fabricated mappings
+- [ ] Uses ratified claim language only (no unearned HIPAA/clinical/hospital-ready claims)
+- [ ] Updates program memory (`CURRENT-STATE` / `NEXT-ACTION` / decisions) as part of delivery closeout
 
 ## Project Structure
 
