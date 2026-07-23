@@ -2,38 +2,38 @@
 
 ## Authorized next action
 
-Plan 001 is founder-accepted. After the local plan-acceptance commit is clean, run:
+The task program for specification 001 is founder-accepted.
+
+Execute **only**:
 
 ```text
-/speckit-tasks
+T001 — Record R0 repository baseline
 ```
 
-Do **not** run `/speckit-implement` until tasks exist and stage entry criteria are met.
-
-**Hard gates (from accepted plan):**
-
-- **ADR-15** accepted before R2 implementation
-- **ADR-05, ADR-07, ADR-08, ADR-09, ADR-10, ADR-14** before relevant R3 work
-- **Signing custody controls (Decision D)** before R5 distribution
-
-Active feature directory:
+Evidence path (per tasks.md):
 
 ```text
-specs/001-fanatir-repository-and-architecture-reconstitution
+docs/program-memory/baseline/R0-repo-baseline.md
 ```
 
-Future authorized (not started): `002-supabase-local-first-and-migration-canonicalization`
+Do **not** execute T002 or later until T001 acceptance criteria pass.
+
+Do **not** run `/speckit-implement` as a blanket auto-runner.
+
+**Hard gates (unchanged):**
+
+- T030 (ADR-15/01/02/06 Accepted) before R2 implementation
+- ADR-05/07/08/09/10/14 before relevant R3 work
+- T060 (Decision D custody) before R5 distribution
+- Vite-only cannot satisfy T042 / T055 / T066
+- Implementing agent may not be the sole independent reviewer of its own Tier A work
 
 ## Not authorized yet
 
-- Product feature implementation
-- `/speckit-implement`
-- OpenMed or Graphify **fork/import** execution
-- Creating or executing specification 002
-- Fehrest or DeepMed-AI product initialization beyond planning/contracts
-- Package rename, file moves/deletions for migration
-- UI redesign or auth/session/`PrivateRoute`/profile behavior changes
-- Expanding, deleting, or mutating `documents-crypto` / Supabase migrations
-- Pictorial or Montada activation
-- Pushing branches or opening pull requests
+- T002+ until T001 complete
+- OpenMed or Graphify fork/import
+- Creating/executing specification 002
+- Supabase migration mutation
+- Auth/session behavior changes
+- Push / PR
 - Distributing unsigned builds
