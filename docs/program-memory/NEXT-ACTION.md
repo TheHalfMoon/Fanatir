@@ -2,25 +2,15 @@
 
 ## Authorized next action
 
-The task program for specification 001 is founder-accepted.
+**T001 complete** (evidence: `docs/program-memory/baseline/R0-repo-baseline.md`).
 
-Execute **only**:
-
-```text
-T001 — Record R0 repository baseline
-```
-
-Evidence path (per tasks.md):
+Next eligible task (do **not** auto-execute unless requested):
 
 ```text
-docs/program-memory/baseline/R0-repo-baseline.md
+T002 — Verify actual build/dev commands for afia-ui and record evidence
 ```
 
-Do **not** execute T002 or later until T001 acceptance criteria pass.
-
-Do **not** run `/speckit-implement` as a blanket auto-runner.
-
-**Hard gates (unchanged):**
+## Hard gates (unchanged)
 
 - T030 (ADR-15/01/02/06 Accepted) before R2 implementation
 - ADR-05/07/08/09/10/14 before relevant R3 work
@@ -30,9 +20,9 @@ Do **not** run `/speckit-implement` as a blanket auto-runner.
 
 ## Not authorized yet
 
-- T002+ until T001 complete
+- Blanket `/speckit-implement`
 - OpenMed or Graphify fork/import
-- Creating/executing specification 002
+- Specification 002 implementation
 - Supabase migration mutation
 - Auth/session behavior changes
 - Push / PR
