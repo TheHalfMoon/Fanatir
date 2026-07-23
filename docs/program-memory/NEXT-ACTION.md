@@ -2,15 +2,15 @@
 
 ## Authorized next action
 
-**T002 complete** (evidence: `docs/program-memory/baseline/R0-build-commands.md`).
+**T003 complete** (evidence: `docs/program-memory/baseline/R0-tooling.md`).
 
 Next eligible task (do **not** auto-execute unless requested):
 
 ```text
-T003 — Verify dependency managers (pnpm/node/rust/python/uv) and versions
+T004 — Map active frontend entry points (Vite client App/routes/Shell)
 ```
 
-Dependencies for T003: **T001** (per tasks.md).
+Dependencies for T004: **T001** (per tasks.md).
 
 ## Hard gates (unchanged)
 
@@ -22,7 +22,7 @@ Dependencies for T003: **T001** (per tasks.md).
 
 ## Not authorized yet
 
-- Installing `afia-ui` dependencies (explicitly withheld in T002)
+- Corepack enable / pnpm prepare / afia-ui install
 - Blanket `/speckit-implement`
 - OpenMed or Graphify fork/import
 - Specification 002 implementation
