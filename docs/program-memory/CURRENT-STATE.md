@@ -4,27 +4,25 @@ Verified local facts only. Unresolved items are marked explicitly.
 
 ## Fanatir
 
-- Branch: `docs/f0-planning-memory-bootstrap` (local only; no upstream)
+- Branch: `docs/f0-planning-memory-bootstrap` (local only; no upstream; nothing pushed; no PR)
 - Spec Kit: `specs/001-fanatir-repository-and-architecture-reconstitution`
-- **T001–T004**: PASS WITH NOTES
-- **T005–T006**: PASS WITH NON-BLOCKING NOTES (Tier A complete)
-- **T007–T009**: PASS WITH NOTES (committed through T009 @ `fc30692`)
-- **T010**: **PASS WITH NOTES** — `docs/program-memory/baseline/R0-path-classification.md` (uncommitted)
-  - Tier B: **APPROVE WITH NOTES**; governance-authority + precision corrections applied
-  - **GOVERNANCE AUTHORITY (exact):** Constitution; Spec 001; plan 001; tasks 001
-  - **ADR-15:** PLANNING EVIDENCE — NON-AUTHORITATIVE ADR DRAFT (accept at T030)
-  - Exact primary-class totals: VA 11 · CA 2 · RBRU 15 · SO 6 · ARCH 6 · ORPH 3 · CONTR 13 · DER 1 · GOV 4 · PLAN 10 · EXT 2 · GEN 4 · INV 4 (sum 81)
-  - Active surface: `afia-ui/` + wired `lib/**` + Python bridges
-  - Root Cargo/go/pnpm: **CONTRADICTORY**
-  - `_archived/**`: **ARCHIVED**
-  - Siblings: EXTERNAL SIBLING PRODUCT (Fehrest empty; DeepMed README-only)
+- Governance: Constitution v1.0.0; accepted Spec 001; Plan 001; Tasks 001
+- **T001–T010**: Completed, founder-accepted, committed
+- **Canonical T010 SHA**: `2c9fb55244588bb35b2d08bc1e1c6bbcbadbd8ec` (hygiene-verified; supersedes `a24ae974770da8f4a1ddccbbd5c2d67217261b1d`)
+- **T011**: Execution complete and **awaiting founder acceptance**. R0 closeout evidence is complete, but the T011 documentation changes remain **uncommitted**.
+  - Evidence package: `docs/program-memory/baseline/R0-evidence-package.md`
+  - Proposed closeout: `R0 CLOSED — REPOSITORY-REALITY BASELINE COMPLETE`
+  - R0 closure does **not** constitute architecture acceptance or implementation authorization
+- ADR-15 remains **PLANNING EVIDENCE — NON-AUTHORITATIVE ADR DRAFT** (accept at **T030**)
+- No Rust/Tauri implementation authorized
+- No R1 task started
 
 ## Fehrest / DeepMed-AI
 
-- Unchanged; read-only; clean
+- Unchanged; read-only; Fehrest empty; DeepMed-AI README-only
 
-## Remaining
+## Remaining (after T011 acceptance + commit)
 
-- Founder acceptance + T010 local docs commit when requested
-- T011 R0 closeout after T010 commit
-- Spec 002; T030 ADR acceptance; real CI later
+- First R1 task: T012 ADR-15 draft only (not acceptance)
+- T030 remains the architecture-acceptance gate
+- Spec 002 (Supabase migration authority) remains future work

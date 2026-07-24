@@ -1,31 +1,42 @@
 ﻿# NEXT-ACTION
 
-## Authorized next action
-
-**T010 evidence complete** (`docs/program-memory/baseline/R0-path-classification.md`), including post-Tier-B governance-authority and precision corrections.
-
-Awaiting founder acceptance + local docs commit (do not auto-commit).
-
-After T010 is accepted and committed, next eligible task:
+## Immediate next action
 
 ```text
-T011 — Produce R0 baseline evidence package and program-memory closeout
+Founder review and acceptance of T011 R0 closeout.
 ```
 
-Dependencies for T011: **T001–T010** (per tasks.md). Review: **Tier C**.
+T011 documentation remains **uncommitted** until founder acceptance.
+
+After **all** of the following:
+
+1. T011 founder acceptance
+2. Clean local T011 documentation commit
+3. Any review gate required by Tasks 001 (Tier C)
+
+…the subsequent task is:
+
+```text
+T012 — Author ADR-15 Rust-First Polyglot Runtime and Language Authority (draft only)
+```
+
+Dependencies for T012: **T011**. Review: **Tier A** (draft only; accept at **T030**).
 
 ## Hard gates
 
-- Draft ADR ≠ accepted authority (ADR-15 waits for **T030**)
-- Do not claim CI green / Trusted Host present / validated FHIR / HIPAA from current tree
-- Do not reactivate `_archived/**` without ADR acceptance (`retain` ≠ reactivate)
-- No OpenMed fork/import; no migration mutation under spec 001
-- No Fehrest/DeepMed init in R0
-- T030 before R2; T060 before signed R5
+- R1 is planning and ADR drafting/review — **not** production implementation
+- Draft ADR ≠ accepted architecture authority
+- **T030** is the architecture-acceptance gate (including ADR-15)
+- No Rust/Tauri implementation before required gates (ADR-15 acceptance before R2)
+- Do not reactivate `_archived/**` without ADR acceptance
+- No OpenMed/Graphify fork/import; no Spec 001 migration mutation
+- No Fehrest/DeepMed init under T011/T012
 
 ## Not authorized yet
 
-- Manifest/CI/path repairs
+- Staging/committing T011 without founder acceptance
+- Starting T012 / any R1 task
 - `/speckit-implement`
 - Push / PR
-- T011 until T010 committed
+- Manifest/CI/path repairs
+- Rust/Tauri/Go production work
