@@ -7,13 +7,14 @@ Verified local facts only. Unresolved items are marked explicitly.
 - Branch: `docs/f0-planning-memory-bootstrap` (local only; no upstream)
 - Spec Kit: `specs/001-fanatir-repository-and-architecture-reconstitution`
 - **T001–T004**: PASS WITH NOTES
-- **T005**: PASS WITH NON-BLOCKING NOTES (Tier A complete)
-- **T006**: **PASS WITH NON-BLOCKING NOTES** (Tier A complete) — `docs/program-memory/baseline/R0-supabase-inventory.md`
-  - Dual `workspaces.sql` byte-identical; authority CONTRADICTORY/UNRESOLVED → spec 002
-  - documents-crypto = frozen legacy PHI-egress seam (server-side field encryption)
-  - Service role: invite accept only (bounded trust seam)
-  - Audit: best-effort / not authoritative
-  - No VERIFIED SECURITY DEFECT from static inspection
+- **T005–T006**: PASS WITH NON-BLOCKING NOTES (Tier A complete)
+- **T007**: **PASS WITH NOTES** — `docs/program-memory/baseline/R0-python-services.md`
+  - `openmed_bridge.py` / `fhir_gate.py` classified as **prototypes**
+  - Bridge: FastAPI on `127.0.0.1:8765`; eager `import openmed`; UI client wired; runtime unverified
+  - FHIR gate: **R4B** structural Bundle emit — not full validator / not commandF
+  - OpenMed not pinned in requirements-bridge; no NOTICE/model-license manifest observed
+  - services/README contradictory (describes missing dirs)
+  - extract-pii TS/Python response shape mismatch
 
 ## Fehrest / DeepMed-AI
 
@@ -22,6 +23,5 @@ Verified local facts only. Unresolved items are marked explicitly.
 ## Remaining
 
 - Spec 002 migration canonicalization
-- ADR-07/14 content/PHI boundary implementation
-- OpenMed pins / model licenses / signing custody
-- Authorized afia-ui install
+- ADR-09 / ADR-10 for DeepMed OpenMed pin and commandF/FHIR version
+- Authorized afia-ui install; signing custody
