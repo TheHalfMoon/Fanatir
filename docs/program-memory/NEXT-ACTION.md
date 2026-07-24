@@ -2,26 +2,26 @@
 
 ## Authorized next action
 
-**T008 complete** (evidence: `docs/program-memory/baseline/R0-archived-assets.md`).
+**T009 complete** (evidence: `docs/program-memory/baseline/R0-ci-tests.md`).
 
 Next eligible task (do **not** auto-execute unless requested):
 
 ```text
-T009 — Inspect current CI and tests honesty
+T010 — Classify paths active/scaffold/archived/orphaned/contradictory
 ```
 
-Dependencies for T009: **T001** (per tasks.md). Review: Tier C.
+Dependencies for T010: **T004, T006, T007, T008, T009** (per tasks.md). Review: **Tier B**.
 
 ## Hard gates
 
-- Do not reactivate `_archived/**` as authority without ADR acceptance
-- Do not repair root Cargo/go/pnpm manifests in R0 without an authorized task
+- Do not claim CI green / production-ready quality from current workflows
+- Do not reactivate `_archived/**` without ADR acceptance
 - No OpenMed fork/import; no migration mutation under spec 001
 - T030 before R2; T060 before signed R5
 
 ## Not authorized yet
 
-- Compiling archived Rust/Go/Tauri
-- Restoring crates into live paths
+- Repairing CI / creating tests
+- Running builds or installs
 - `/speckit-implement`
 - Push / PR
