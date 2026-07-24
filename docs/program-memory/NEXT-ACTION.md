@@ -2,31 +2,34 @@
 
 ## Authorized next action
 
-**T004 complete** (evidence: `docs/program-memory/baseline/R0-frontend-map.md`).
+**T005 complete and founder-accepted** (evidence: `docs/program-memory/baseline/R0-auth-session.md`).
+
+Tier A independent review for T005: **complete**.
 
 Next eligible task (do **not** auto-execute unless requested):
 
 ```text
-T005 — Verify auth/session/PrivateRoute/profile behavior (observe-only)
+T006 — Inspect Supabase clients and both migration trees (freeze inventory)
 ```
 
-Dependencies for T005: **T004** (per tasks.md). Review: **Tier A**.
+Dependencies for T006: **T001** (per tasks.md). Review: **Tier A**.
+
+T006 owns: RLS policies; migration truth; DB constraints; service-role use; workspace-invites / documents-crypto authorization; audit-table enforcement; server workspace-role enforcement; document/PHI storage behavior.
 
 ## Hard gates (unchanged)
 
+- Do not change AuthContext / PrivateRoute / session / consent / profile behavior until dedicated migration specification + ADR
 - T030 (ADR-15/01/02/06 Accepted) before R2 implementation
-- ADR-05/07/08/09/10/14 before relevant R3 work
-- T060 (Decision D custody) before R5 distribution
+- No migration mutation under specification 001 (future 002 owns canonicalization)
 - Vite-only cannot satisfy T042 / T055 / T066
 - Implementing agent may not be the sole independent reviewer of its own Tier A work
 
 ## Not authorized yet
 
+- Auth/session code changes
+- Supabase migration mutation / documents-crypto expansion
 - Dev server / dependency install
-- Auth/session/PrivateRoute/profile code changes
 - Blanket `/speckit-implement`
 - OpenMed or Graphify fork/import
-- Specification 002 implementation
-- Supabase migration mutation
 - Push / PR
 - Distributing unsigned builds
