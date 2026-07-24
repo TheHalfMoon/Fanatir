@@ -2,15 +2,15 @@
 
 ## Authorized next action
 
-**T003 complete** (evidence: `docs/program-memory/baseline/R0-tooling.md`).
+**T004 complete** (evidence: `docs/program-memory/baseline/R0-frontend-map.md`).
 
 Next eligible task (do **not** auto-execute unless requested):
 
 ```text
-T004 — Map active frontend entry points (Vite client App/routes/Shell)
+T005 — Verify auth/session/PrivateRoute/profile behavior (observe-only)
 ```
 
-Dependencies for T004: **T001** (per tasks.md).
+Dependencies for T005: **T004** (per tasks.md). Review: **Tier A**.
 
 ## Hard gates (unchanged)
 
@@ -22,11 +22,11 @@ Dependencies for T004: **T001** (per tasks.md).
 
 ## Not authorized yet
 
-- Corepack enable / pnpm prepare / afia-ui install
+- Dev server / dependency install
+- Auth/session/PrivateRoute/profile code changes
 - Blanket `/speckit-implement`
 - OpenMed or Graphify fork/import
 - Specification 002 implementation
 - Supabase migration mutation
-- Auth/session behavior changes
 - Push / PR
 - Distributing unsigned builds
