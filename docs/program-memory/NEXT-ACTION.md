@@ -3,46 +3,58 @@
 ## Immediate next action
 
 ```text
-Independent post-sign-off integrity verification of the T030 Tier A review-status update
+Recover and verify the canonical T031 contract in strict read-only mode.
 ```
 
-Tier A — R1 architecture gate review has **passed with non-blocking notes**. Decision recorded:
+## T030 / R1 status (canonical after Commit 2)
+
+```text
+T030 complete — ADR-15/01/02/06 Accepted; R2 may begin
+```
+
+R1 architecture gate: **Passed and canonically closed** (authoring pending independent verification + Commit 2).
+
+R2: **Eligible for separately authorized entry; not started.**
+
+T031: **Not authorized.**
+
+Pre-closeout package commit (Commit 1): `2b257ac08dc8c0d566ae8a4be78f8af9711ef9f1`.
+
+Tier A decision (historical):
 
 ```text
 APPROVE WITH NON-BLOCKING NOTES — TIER A R1 ARCHITECTURE GATE REVIEW PASSED
 ```
 
-T030 remains **uncommitted** and **not yet canonically complete**. Staging and commit remain unauthorized until after post-sign-off integrity verification and a separate commit authorization.
+## Permitted next step
 
-## Remaining sequence
+T031 **contract recovery only** — read-only recovery and verification of the canonical T031 task contract from repository evidence.
 
-1. Post-sign-off integrity verification of this Tier A review-status update
-2. Separate normalized local commit authorization
-3. Verified local T030 documentation commit
-4. Only afterward, a separate founder decision for T031 or R2 entry
+A separate founder execution authorization is required after T031 contract recovery before any T031 authoring or implementation.
+
+## Explicitly prohibited now
+
+- T031 authoring or implementation
+- Starting R2 implementation
+- Modifying source
+- Creating schemas or generated bindings
+- IPC or worker implementation
+- Persistence implementation
+- UI or authentication implementation
+- Spec 002 creation / Spec Kit
+- Migration editing or execution
+- Supabase runtime or schema changes
+- Real patient data or PHI handling
+- Fehrest, DeepMed, or commandF implementation
+- Staging, committing, pushing, or creating a PR as part of T031 recovery
 
 ## Hard gates
 
-- Tier A pass ≠ T030 commit ≠ T031 authorization ≠ R2 start
+- R1 closeout ≠ T031 authorization ≠ R2 start
 - Accepted ADR-15/01/02/06 ≠ R2 implementation start
 - Reviewed ADR-04/05/07/08/09/10/14 ≠ Accepted for later implementation domains
 - ADR-03/11/12/13 remain Proposed
-- No Rust/Tauri implementation before separate T031/R2 founder authorization
 - Preserve Decision C; T028 `documents-crypto` freeze; no real patient / production PHI
 - Spec 002 remains charter-only; no `/speckit.specify`; no `specs/002*`
-- Do not modify Fehrest / DeepMed / commandF under T030
-- Do not modify `tasks.md` checkboxes under T030
-- Do not implement N-T030-1 (residual ADR body language) or N-T030-2 (EOL mix) in this recording step
-
-## Not authorized yet
-
-- Staging / committing T030
-- Push / PR / upstream
-- T031 execution
-- R2 implementation
-- Spec 002 creation / Spec Kit
-- Migrations / Supabase runtime or schema changes
-- Real patient data or PHI handling
-- Source, schema, IPC, worker, persistence, UI, or authentication implementation
-- Packaging / release / production deployment
-- R3 / R5
+- Do not modify `tasks.md` under this closeout authoring
+- Do not implement N-T030-1 / N-T030-2 / ADR body or EOL cleanup

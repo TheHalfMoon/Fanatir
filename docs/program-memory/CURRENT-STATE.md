@@ -7,10 +7,29 @@ Verified local facts only. Unresolved items are marked explicitly.
 - Branch: `docs/f0-planning-memory-bootstrap` (local only; no upstream; nothing pushed; no PR)
 - Spec Kit: `specs/001-fanatir-repository-and-architecture-reconstitution`
 - Governance: Constitution v1.0.0; accepted Spec 001; Plan 001; Tasks 001
-- **T001–T029**: R1 drafting/freeze/charter work products authored and locally committed through T029 (`2cc5e8d312210f30a751006dda6143d6d126ff43`). `tasks.md` checklist boxes for T012–T030 remain unchecked pending separate checklist authorization.
-- **T030**: R1 architecture-gate status and program-memory authoring recorded under founder authorization. Independent **Tier A — R1 architecture gate** review has **passed with non-blocking notes**. T030 remains **uncommitted** and is **not yet canonically complete**.
+- **T001–T029**: R1 drafting/freeze/charter work products authored and locally committed through T029 (`2cc5e8d312210f30a751006dda6143d6d126ff43`). `tasks.md` checklist boxes for T012–T030 remain unchecked because the founder-authorized T030 mutation scope excluded `tasks.md` (administrative bookkeeping only; not a reversal of T030/R1 closeout). Any future checklist reconciliation requires separate authorization.
+- **T030**: Complete.
 
-### T030 founder R1 architecture-gate decisions (unchanged)
+### T030 / R1 architecture-gate closeout (canonical)
+
+```text
+T030 complete — ADR-15/01/02/06 Accepted; R2 may begin
+```
+
+Qualification: “R2 may begin” means R2 is **eligible for a separately authorized founder entry decision**. It does **not** mean R2 implementation has begun; does **not** authorize T031; does **not** authorize source, schema, IPC, worker, persistence, UI, authentication, migration, Supabase-runtime, PHI, Spec 002, Spec Kit, or production implementation.
+
+| Field | Value |
+| --- | --- |
+| **R1 architecture gate** | Passed and canonically closed |
+| **T030 status** | Complete |
+| **T030 pre-closeout commit** | `2b257ac08dc8c0d566ae8a4be78f8af9711ef9f1` |
+| **Founder work-product acceptance** | Yes — R1 architecture gate |
+| **Tier A review** | Passed with non-blocking notes |
+| **Post-sign-off integrity review** | Passed with non-blocking notes |
+| **R2 status** | Eligible for separately authorized entry; not started |
+| **T031 status** | Not authorized; canonical contract recovery is the next permitted read-only step |
+
+### Founder R1 architecture-gate decisions (canonical)
 
 Founder acceptance:
 
@@ -39,7 +58,7 @@ ADR-10 — Reviewed
 ADR-14 — Reviewed
 ```
 
-Remain Proposed (T030 not authorized to change):
+Remain Proposed:
 
 ```text
 ADR-03 — Proposed
@@ -48,9 +67,9 @@ ADR-12 — Proposed
 ADR-13 — Proposed
 ```
 
-ADR-06 clarification: Accepted because T030 / R2-entry contracts require it; T031 remains separately gated; shell-only functional note does not weaken the governance requirement.
+ADR-06 clarification: Accepted because T030 / R2-entry contracts require it; T031 remains separately gated; shell-only functional note does not weaken the governance requirement. Reviewed ≠ Accepted. ADR-05, ADR-07, and ADR-14 still require later Accepted status where downstream tasks require it.
 
-### T030 Tier A — R1 architecture gate (recorded)
+### Review evidence (historical; completed)
 
 | Field | Value |
 | --- | --- |
@@ -59,12 +78,9 @@ ADR-06 clarification: Accepted because T030 / R2-entry contracts require it; T03
 | **Decision** | `APPROVE WITH NON-BLOCKING NOTES — TIER A R1 ARCHITECTURE GATE REVIEW PASSED` |
 | **Reviewer** | Independent Tier A reviewer |
 | **Review date** | 2026-07-26 |
-| **Founder work-product acceptance** | Yes — R1 architecture gate |
 | **Blocking findings** | None |
 | **Non-blocking notes** | N-T030-1, N-T030-2 |
 | **Observations** | O-T030-1, O-T030-2, O-T030-3, O-T030-4 |
-
-Finding disposition (identifiers only; notes not implemented in this recording step):
 
 ```text
 Blocking findings: None
@@ -72,40 +88,54 @@ Non-blocking notes: N-T030-1, N-T030-2
 Observations: O-T030-1, O-T030-2, O-T030-3, O-T030-4
 ```
 
+Post-sign-off integrity (completed before pre-closeout commit):
+
 ```text
-Tier A review has passed.
-T030 remains uncommitted and is not yet canonically complete.
-Post-sign-off integrity verification and a normalized local commit remain required.
-R1 canonical closeout is pending those steps.
-R2 implementation has not begun.
-T031 remains blocked pending separate founder execution authorization.
+APPROVE WITH NON-BLOCKING NOTES — T030 POST-SIGN-OFF INTEGRITY REVIEW PASSED
 ```
 
-**Authority disclaimer:** Tier A approval confirms founder-decision fidelity and the authored ADR status transitions. It is **not** an additional founder decision; **not** implementation authorization; does **not** start T031; does **not** begin R2 implementation; does **not** create Spec 002; does **not** authorize Spec Kit; does **not** authorize migrations; does **not** authorize Supabase runtime or PHI use; does **not** authorize Fehrest, DeepMed, or commandF implementation; and does **not** create production-readiness or compliance claims.
+```text
+Blocking findings: None
+Non-blocking notes: N-INT-1
+Observations: O-INT-1, O-INT-2
+```
+
+Pre-closeout commit result:
+
+```text
+PASS — T030 PRE-CLOSEOUT PACKAGE COMMITTED LOCALLY WITH VERIFIED GIT NORMALIZATION
+```
+
+**Authority disclaimer:** Tier A approval and R1 closeout confirm founder-decision fidelity and the authored ADR status transitions. They are **not** additional founder decisions for implementation; **not** T031 authorization; do **not** begin R2 implementation; do **not** create Spec 002; do **not** authorize Spec Kit; do **not** authorize migrations; do **not** authorize Supabase runtime or PHI use; do **not** authorize Fehrest, DeepMed, or commandF implementation; and do **not** create production-readiness or compliance claims.
+
+### R1 / R2 / T031 semantics (current)
+
+- R1 architecture work is closed at the **governance** level; selected ADR status decisions are canonical.
+- T012–T029 dependency work was completed in substance; T030 completed its architecture-gate purpose.
+- No R2 implementation commit exists; no R2 branch, worktree, code, schema, or runtime work was created by T030.
+- R1 closeout does **not** imply the entire Fanatir project is architecturally complete, that every ADR is Accepted, that any production capability exists, or that any compliance status exists.
+- T031 remains blocked pending: recovery and verification of its canonical task contract; separate founder execution authorization; any task-specific review or worktree requirement recovered from canon.
+
+### Plan R1 blocking-matrix checklist (canonical)
+
+| Gate item | Recorded state |
+| --- | --- |
+| ADR-15 Accepted before any R2 implementation | **Accepted** |
+| ADR-01 Accepted | **Accepted** |
+| ADR-02 Accepted | **Accepted** |
+| ADR-06 Accepted | **Accepted** |
+| ADR-04 / 05 / 07 / 08 / 09 / 10 / 14 Reviewed or Accepted | **Reviewed** |
+| ADR-03 / 11 / 12 / 13 | **Proposed** |
+| No R2 implementation commits | Confirmed |
+| Future Spec 002 | Charter only (T029); Spec 002 not created |
+| `documents-crypto` | Frozen (T028); no real patient / production PHI |
 
 ### Authority distinctions (current)
 
 - Architecture-governance Accepted ≠ T031 / R2 / source / schema / codegen / migration / Supabase runtime / PHI / Spec 002 / packaging / release / production authorization
 - Reviewed ≠ Accepted for Artifact Store (ADR-05), Supabase adapter/migrations (ADR-07), classified-data/PHI-egress implementation (ADR-14), or Fehrest/DeepMed/commandF product stages (ADR-08/09/10)
-- Decision C remains ratified; T028 `documents-crypto` freeze remains in force; T029 Spec 002 charter remains charter-only (`specs/002*` absent)
-- No Rust/Tauri/R2 implementation authorized
-- R2 is **not** begun; after post-sign-off integrity verification and a normalized local T030 commit, R2 becomes **eligible for separately authorized entry** only
-
-### Plan R1 blocking-matrix checklist (authoring + Tier A)
-
-| Gate item | Recorded state |
-| --- | --- |
-| ADR-15 Accepted before any R2 implementation | **Accepted** (founder decision; Tier A passed) |
-| ADR-01 Accepted | **Accepted** (Tier A passed) |
-| ADR-02 Accepted | **Accepted** (Tier A passed) |
-| ADR-06 Accepted | **Accepted** (Tier A passed) |
-| ADR-04 / 05 / 07 / 08 / 09 / 10 / 14 Reviewed or Accepted | **Reviewed** (Tier A passed) |
-| ADR-03 / 11 / 12 / 13 | **Proposed** (unchanged) |
-| No R2 implementation commits | Confirmed (authoring docs only; no `apps/desktop` / host impl) |
-| Future Spec 002 | Charter only (T029); Spec 002 not created |
-| `documents-crypto` | Frozen (T028); no real patient / production PHI |
-
-Canonical closeout wording (`R1 architecture gate passed` / `R2 is eligible for separately authorized entry`) and the checkpoint `T030 complete — ADR-15/01/02/06 Accepted; R2 may begin` remain reserved until post-sign-off integrity verification passes and the normalized local T030 commit is created and verified.
+- Decision C remains ratified; T028 `documents-crypto` freeze remains in force; T029 Spec 002 charter remains charter-only (`002-supabase-local-first-and-migration-canonicalization`; `specs/002*` absent)
+- No Rust/Tauri/R2 implementation authorized or begun
 
 ## Fehrest / DeepMed / commandF
 
@@ -113,9 +143,12 @@ Canonical closeout wording (`R1 architecture gate passed` / `R2 is eligible for 
 - Fehrest empty; DeepMed-AI README-only
 - commandF strategy does not automatically Accept ADR-10 (ADR-10 is **Reviewed** only)
 
-## Remaining (after integrity verification + local T030 commit)
+## Remaining
 
+- Recover and verify the canonical T031 contract in strict read-only mode (next permitted step)
 - Separate founder authorization required before T031 / any R2 implementation
 - Separate later Accepted required for ADR-05 / ADR-07 / ADR-14 (and product ADRs) before their gated implementation domains
 - Spec 002 remains separately gated
 - `tasks.md` checklist reconciliation requires separate authorization
+
+This final-closeout authoring becomes canonical only after independent verification and a separately authorized Commit 2.
