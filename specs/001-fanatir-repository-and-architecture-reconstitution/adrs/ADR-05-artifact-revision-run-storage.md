@@ -4,29 +4,32 @@
 | --- | --- |
 | **ADR** | ADR-05 |
 | **Title** | Artifact/Revision/Run Storage |
-| **Status** | **Proposed** (draft only) |
+| **Status** | **Reviewed** (T030 R1 architecture gate; not Accepted) |
 | **Task origin** | T018 |
 | **Acceptance / review posture** | Tier A independent review after drafting; **T030** expects ADR-05 listed **Reviewed or Accepted** (not automatically Accepted; **not** in the mandatory Accepted set that opens R2). **T037** requires ADR-05 **Accepted** before Artifact Store foundation |
 | **Feature** | `001-fanatir-repository-and-architecture-reconstitution` |
 | **Related founder decision** | Decision C (content/PHI/Artifact revisions → local Rust Artifact Store; Supabase = optional collab/identity) — **Ratified** in accepted [plan.md](../plan.md) |
-| **Constraining drafts** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Proposed); [ADR-02](./ADR-02-rust-trusted-host-boundary.md) (Proposed); [ADR-04](./ADR-04-shared-primitive-ownership-and-versioning.md) (Proposed) |
-| **Related drafts** | [ADR-01](./ADR-01-platform-and-desktop-composition-tauri-2.md) (Proposed); [ADR-03](./ADR-03-afia-ui-strangler-migration.md) (Proposed); [ADR-06](./ADR-06-worker-and-ipc-contracts.md) (Proposed) |
+| **Constraining ADRs** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Accepted at T030); [ADR-02](./ADR-02-rust-trusted-host-boundary.md) (Accepted at T030); [ADR-04](./ADR-04-shared-primitive-ownership-and-versioning.md) (Reviewed at T030) |
+| **Related ADRs** | [ADR-01](./ADR-01-platform-and-desktop-composition-tauri-2.md) (Accepted at T030); [ADR-03](./ADR-03-afia-ui-strangler-migration.md) (Proposed); [ADR-06](./ADR-06-worker-and-ipc-contracts.md) (Accepted at T030) |
 | **Planning evidence** | [data-model.md](../data-model.md); [shared-primitives.md](../contracts/shared-primitives.md); [trusted-host-ipc.md](../contracts/trusted-host-ipc.md); [worker-runtime.md](../contracts/worker-runtime.md); [supabase-adapter.md](../contracts/supabase-adapter.md); [research.md](../research.md) R14/P1; [plan.md](../plan.md) ADR-05 row / Decision C; [tasks.md](../tasks.md) T018/T030/T037 |
-| **Architecture authority of this file** | **NO** — until a valid stage-gate acceptance action records Accepted |
+| **T030 founder decision** | **Reviewed** — R1 architecture gate; not Accepted; separate later Accepted required before Artifact Store implementation (e.g. T037) |
+| **Architecture authority of this file** | **NO** — Reviewed at T030; Accepted required before Artifact Store implementation |
 | **Implementation authorization** | **NO** |
 
 ```text
-This document is a planning draft and is not accepted architecture authority.
+Status: Reviewed (T030 R1 architecture gate; not Accepted)
+Architecture authority: NO (Reviewed ≠ Accepted)
+Implementation authorization: NO
+Artifact Store implementation: NOT authorized until separate later Accepted
+Independent Tier A — R1 architecture gate: Pending
 ```
 
 ```text
-Status: Proposed
 Draft ADR ≠ architecture acceptance
-T018 completion ≠ T030 acceptance
-Passing Tier A review ≠ Accepted
-tasks.md does not require founder acceptance of the T018 draft work product
-Founder acceptance of a draft work product ≠ architecture acceptance
-ADR-15 / ADR-01 / ADR-02 / ADR-03 / ADR-04 / ADR-06 remain Proposed and non-authoritative
+T018 completion ≠ T030 acceptance (T030 founder Reviewed decision now recorded)
+Passing Tier A review of a draft ≠ Accepted
+Reviewed ≠ Accepted for Artifact Store foundation
+ADR-03 remains Proposed
 ```
 
 ```text

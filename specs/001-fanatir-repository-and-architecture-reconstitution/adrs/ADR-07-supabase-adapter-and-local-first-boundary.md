@@ -4,30 +4,33 @@
 | --- | --- |
 | **ADR** | ADR-07 |
 | **Title** | Supabase Adapter and Local-First Boundary |
-| **Status** | **Proposed** (draft only) |
+| **Status** | **Reviewed** (T030 R1 architecture gate; not Accepted) |
 | **Task origin** | T019 |
 | **Acceptance / review posture** | Tier A independent review after drafting; **T030** expects ADR-07 listed **Reviewed or Accepted** (not automatically Accepted; **not** in the mandatory Accepted set that opens R2). Later work such as **T057** requires ADR-07 and ADR-14 **Accepted** |
 | **Feature** | `001-fanatir-repository-and-architecture-reconstitution` |
 | **Related founder decision** | Decision C (content/PHI/Artifact revisions → local Rust Artifact Store; Supabase = optional collab/identity; freeze `documents-crypto`; future Spec 002 authorized by name) — **Ratified** in accepted [plan.md](../plan.md) |
-| **Constraining drafts** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Proposed); [ADR-05](./ADR-05-artifact-revision-run-storage.md) (Proposed); [ADR-04](./ADR-04-shared-primitive-ownership-and-versioning.md) (Proposed); [ADR-02](./ADR-02-rust-trusted-host-boundary.md) (Proposed) |
-| **Related drafts** | [ADR-01](./ADR-01-platform-and-desktop-composition-tauri-2.md) (Proposed); [ADR-03](./ADR-03-afia-ui-strangler-migration.md) (Proposed); [ADR-06](./ADR-06-worker-and-ipc-contracts.md) (Proposed) |
+| **Constraining ADRs** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Accepted at T030); [ADR-05](./ADR-05-artifact-revision-run-storage.md) (Reviewed at T030); [ADR-04](./ADR-04-shared-primitive-ownership-and-versioning.md) (Reviewed at T030); [ADR-02](./ADR-02-rust-trusted-host-boundary.md) (Accepted at T030) |
+| **Related ADRs** | [ADR-01](./ADR-01-platform-and-desktop-composition-tauri-2.md) (Accepted at T030); [ADR-03](./ADR-03-afia-ui-strangler-migration.md) (Proposed); [ADR-06](./ADR-06-worker-and-ipc-contracts.md) (Accepted at T030) |
 | **Planning evidence** | [supabase-adapter.md](../contracts/supabase-adapter.md); [research.md](../research.md) R8/R14/P1; [plan.md](../plan.md) Decision C / ADR-07 row; [spec.md](../spec.md) Q4 / FR-015; [R0-supabase-inventory.md](../../../docs/program-memory/baseline/R0-supabase-inventory.md); [data-model.md](../data-model.md); [shared-primitives.md](../contracts/shared-primitives.md); [tasks.md](../tasks.md) T019/T028/T029/T030/T057 |
-| **Architecture authority of this file** | **NO** — until a valid stage-gate acceptance action records Accepted |
+| **T030 founder decision** | **Reviewed** — R1 architecture gate; not Accepted; separate later Accepted required before governed Supabase adapter or migration work (e.g. T057) |
+| **Architecture authority of this file** | **NO** — Reviewed at T030; Accepted required before Supabase adapter / migration implementation |
 | **Implementation authorization** | **NO** |
 
 ```text
-This document is a planning draft and is not accepted architecture authority.
+Status: Reviewed (T030 R1 architecture gate; not Accepted)
+Architecture authority: NO (Reviewed ≠ Accepted)
+Implementation authorization: NO
+Supabase adapter / migration / Spec 002 execution: NOT authorized
+Independent Tier A — R1 architecture gate: Pending
 ```
 
 ```text
-Status: Proposed
 Draft ADR ≠ architecture acceptance
-T019 completion ≠ T030 acceptance
-Passing Tier A review ≠ Accepted
-tasks.md founder-acceptance field for T019: No — draft only; Decision C already ratified
-Founder acceptance of a draft work product ≠ architecture acceptance
+T019 completion ≠ T030 acceptance (T030 founder Reviewed decision now recorded)
+Passing Tier A review of a draft ≠ Accepted
 Ratified Decision C ≠ Accepted ADR-07
-ADR-15 / ADR-01 / ADR-02 / ADR-03 / ADR-04 / ADR-05 / ADR-06 remain Proposed and non-authoritative
+Reviewed ≠ Accepted for Supabase adapter or migration work
+ADR-03 remains Proposed
 ```
 
 ```text

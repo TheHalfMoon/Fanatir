@@ -4,34 +4,36 @@
 | --- | --- |
 | **ADR** | ADR-09 |
 | **Title** | DeepMed Integration and OpenMed Runtime/Fork Boundary |
-| **Status** | **Proposed** (draft only) |
+| **Status** | **Reviewed** (T030 R1 architecture gate; not Accepted) |
 | **Task origin** | T021 |
 | **Acceptance / review posture** | Tier A independent review after drafting; **T030** expects ADR-09 listed **Reviewed or Accepted** (not automatically Accepted; **not** in the mandatory Accepted set that opens R2). DeepMed implementation such as **T048** / **T049** requires ADR-09 **Accepted**; **T050** requires ADR-08 / ADR-09 / ADR-05 **Accepted** |
 | **Feature** | `001-fanatir-repository-and-architecture-reconstitution` |
 | **Required gate (tasks.md)** | Decision B; no fork/import task under 001 |
 | **Planning dependency (plan.md)** | Q6, P3, ADR-15, Decision B |
 | **Related founder decision** | Decision B (R3 DeepMed may temporarily use OpenMed **PyPI** runtime — package use ≠ fork/import; requirements via ADR-09; not final architecture) — **Ratified** in accepted [plan.md](../plan.md) |
-| **Constraining drafts** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Proposed); [ADR-02](./ADR-02-rust-trusted-host-boundary.md) (Proposed); [ADR-04](./ADR-04-shared-primitive-ownership-and-versioning.md) (Proposed); [ADR-05](./ADR-05-artifact-revision-run-storage.md) (Proposed); [ADR-06](./ADR-06-worker-and-ipc-contracts.md) (Proposed); [ADR-07](./ADR-07-supabase-adapter-and-local-first-boundary.md) (Proposed); [ADR-08](./ADR-08-fehrest-integration-and-release-model.md) (Proposed) |
-| **Related drafts** | [ADR-01](./ADR-01-platform-and-desktop-composition-tauri-2.md) (Proposed); [ADR-03](./ADR-03-afia-ui-strangler-migration.md) (Proposed) |
+| **Constraining ADRs** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Accepted at T030); [ADR-02](./ADR-02-rust-trusted-host-boundary.md) (Accepted at T030); [ADR-04](./ADR-04-shared-primitive-ownership-and-versioning.md) (Reviewed at T030); [ADR-05](./ADR-05-artifact-revision-run-storage.md) (Reviewed at T030); [ADR-06](./ADR-06-worker-and-ipc-contracts.md) (Accepted at T030); [ADR-07](./ADR-07-supabase-adapter-and-local-first-boundary.md) (Reviewed at T030); [ADR-08](./ADR-08-fehrest-integration-and-release-model.md) (Reviewed at T030) |
+| **Related ADRs** | [ADR-01](./ADR-01-platform-and-desktop-composition-tauri-2.md) (Accepted at T030); [ADR-03](./ADR-03-afia-ui-strangler-migration.md) (Proposed) |
 | **Planning evidence** | [spec.md](../spec.md) Q6; [plan.md](../plan.md) Decision B / ADR-09 row; [research.md](../research.md) R7 / R10 / R13 / P3; [deepmed-integration.md](../contracts/deepmed-integration.md); [R0-python-services.md](../../../docs/program-memory/baseline/R0-python-services.md); [data-model.md](../data-model.md); [shared-primitives.md](../contracts/shared-primitives.md); [trusted-host-ipc.md](../contracts/trusted-host-ipc.md); [worker-runtime.md](../contracts/worker-runtime.md); [tasks.md](../tasks.md) T021 / T007 / T030 / T048–T050 |
-| **Architecture authority of this file** | **NO** — until a valid stage-gate acceptance action records Accepted |
+| **T030 founder decision** | **Reviewed** — R1 architecture gate; not Accepted; DeepMed product stage remains separately gated |
+| **Architecture authority of this file** | **NO** — Reviewed at T030; Accepted required before DeepMed implementation |
 | **Implementation authorization** | **NO** |
 
 ```text
-This document is a planning draft and is not accepted architecture authority.
+Status: Reviewed (T030 R1 architecture gate; not Accepted)
+Architecture authority: NO (Reviewed ≠ Accepted)
+Implementation authorization: NO
+DeepMed / providers / models / prompts: NOT authorized
+Independent Tier A — R1 architecture gate: Pending
 ```
 
 ```text
-Status: Proposed
 Draft ADR ≠ architecture acceptance
-T021 completion ≠ T030 acceptance
-Passing Tier A review ≠ Accepted
-tasks.md founder-acceptance field for T021: No — draft only; Decision B already ratified
-Founder acceptance of a draft work product ≠ architecture acceptance
+T021 completion ≠ T030 acceptance (T030 founder Reviewed decision now recorded)
+Passing Tier A review of a draft ≠ Accepted
 Ratified Decision B ≠ Accepted ADR-09
 Founder-ratified Q6 ≠ Accepted ADR-09
-P3 is planning research resolution ≠ Accepted ADR-09
-ADR-15 / ADR-01 / ADR-02 / ADR-03 / ADR-04 / ADR-05 / ADR-06 / ADR-07 / ADR-08 remain Proposed and non-authoritative
+Reviewed ≠ Accepted for DeepMed product work
+ADR-03 remains Proposed
 ```
 
 ```text
@@ -510,7 +512,7 @@ Authoritative audit ownership remains with Trusted Host / **ADR-02** and later a
 | Clinical authority | Assistive only; review-required; no silent approval |
 | Persistence | ADR-04/05 retain semantics/persistence; candidates only |
 | Fehrest / commandF | Governed handoff; ADR-08 / ADR-10 |
-| Status | Proposed only |
+| Status | Reviewed (T030; not Accepted) |
 
 ---
 

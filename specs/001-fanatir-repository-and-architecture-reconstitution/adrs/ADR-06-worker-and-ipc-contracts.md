@@ -4,31 +4,35 @@
 | --- | --- |
 | **ADR** | ADR-06 |
 | **Title** | Worker and IPC Contracts |
-| **Status** | **Proposed** (draft only) |
+| **Status** | **Accepted** (T030 R1 architecture gate) |
 | **Task origin** | T017 |
 | **Acceptance / review posture** | Tier A independent review after drafting; **T030** mandatory Accepted set includes ADR-06 (with ADR-15/01/02). T017 itself grants **no** architecture acceptance |
 | **Feature** | `001-fanatir-repository-and-architecture-reconstitution` |
-| **Constraining drafts** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Proposed); [ADR-02](./ADR-02-rust-trusted-host-boundary.md) (Proposed) |
-| **Related drafts** | [ADR-01](./ADR-01-platform-and-desktop-composition-tauri-2.md) (Proposed); [ADR-03](./ADR-03-afia-ui-strangler-migration.md) (Proposed); [ADR-04](./ADR-04-shared-primitive-ownership-and-versioning.md) (Proposed) |
+| **Constraining ADRs** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Accepted at T030); [ADR-02](./ADR-02-rust-trusted-host-boundary.md) (Accepted at T030) |
+| **Related ADRs** | [ADR-01](./ADR-01-platform-and-desktop-composition-tauri-2.md) (Accepted at T030); [ADR-03](./ADR-03-afia-ui-strangler-migration.md) (Proposed); [ADR-04](./ADR-04-shared-primitive-ownership-and-versioning.md) (Reviewed at T030) |
 | **Planning evidence** | [trusted-host-ipc.md](../contracts/trusted-host-ipc.md); [worker-runtime.md](../contracts/worker-runtime.md); [plan.md](../plan.md) ADR-06 row; [research.md](../research.md) |
-| **Architecture authority of this file** | **NO** — until a valid stage-gate acceptance action records Accepted |
+| **T030 founder decision** | **Accepted** — R1 architecture gate (`Yes — R1 architecture gate`); Tier A review Pending. Accepted for R1/R2 governance; does **not** auto-authorize T031 or plugin/capability/runtime work. |
+| **Architecture authority of this file** | **YES** — architecture governance only (T030); does **not** authorize implementation |
 | **Implementation authorization** | **NO** |
 
 ```text
-This document is a planning draft and is not accepted architecture authority.
+Status: Accepted (T030 R1 architecture gate)
+Architecture authority: YES (governance only)
+Implementation authorization: NO
+T031 / IPC publication / worker runtime / plugin work: NOT authorized by this status alone
+Independent Tier A — R1 architecture gate: Pending
 ```
 
 ```text
-Status: Proposed
 Draft ADR ≠ architecture acceptance
-T017 completion ≠ T030 acceptance
-Passing Tier A review ≠ Accepted
-Founder acceptance of a draft work product ≠ architecture acceptance
-ADR-15 / ADR-01 / ADR-02 / ADR-03 / ADR-04 remain Proposed and non-authoritative
+T017 completion ≠ T030 acceptance (T030 founder decision now recorded)
+Passing Tier A review of a draft ≠ Accepted (founder R1 gate recorded separately)
+Accepted ADR-06 ≠ T031 or plugin/capability/runtime authorization
+ADR-03 remains Proposed; ADR-04 is Reviewed (not Accepted for implementation)
 ```
 
 ```text
-This draft is not:
+This Accepted ADR is not:
 - production IPC publication
 - worker implementation
 - Trusted Host implementation

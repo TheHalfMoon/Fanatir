@@ -4,30 +4,34 @@
 | --- | --- |
 | **ADR** | ADR-02 |
 | **Title** | Rust Trusted Host Boundary |
-| **Status** | **Proposed** (draft only) |
+| **Status** | **Accepted** (T030 R1 architecture gate) |
 | **Task origin** | T014 |
 | **Acceptance gate** | **T030** (with ADR-15, ADR-01, and ADR-06 per Tasks 001 / Plan R1–R2 entry) |
 | **Feature** | `001-fanatir-repository-and-architecture-reconstitution` |
-| **Constraining drafts** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Proposed); [ADR-01](./ADR-01-platform-and-desktop-composition-tauri-2.md) (Proposed) |
-| **Architecture authority of this file** | **NO** — until accepted at T030 |
+| **Constraining ADRs** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Accepted at T030); [ADR-01](./ADR-01-platform-and-desktop-composition-tauri-2.md) (Accepted at T030) |
+| **T030 founder decision** | **Accepted** — R1 architecture gate (`Yes — R1 architecture gate`); Tier A review Pending |
+| **Architecture authority of this file** | **YES** — architecture governance only (T030); does **not** authorize implementation |
 | **Implementation authorization** | **NO** |
 
 ```text
-This document is a planning draft and is not accepted architecture authority.
+Status: Accepted (T030 R1 architecture gate)
+Architecture authority: YES (governance only)
+Implementation authorization: NO
+T031 / R2 / Trusted Host implementation: NOT authorized by this status alone
+Independent Tier A — R1 architecture gate: Pending
 ```
 
 ```text
 Completed ADR drafting task ≠ architecture acceptance
-T014 completion ≠ T030 acceptance
-ADR-15 remains Proposed and does not accept language authority by itself
-ADR-01 remains Proposed and does not accept Tauri by itself
+T014 completion ≠ T030 acceptance (T030 founder decision now recorded)
+Accepted ADR-15 / ADR-01 / ADR-02 ≠ automatic host implementation
 ```
 
 ```text
-No production implementation is authorized by this draft.
+No production implementation is authorized by this Accepted status alone.
 ```
 
-This draft **must not** be used as justification to: create `apps/desktop/**` or Rust crates; install Tauri/Rust toolchains for production cutover; add Tauri commands or capability files; implement IPC; mediate filesystem/process/secrets/network; wire OpenMed/sidecars; modify `afia-ui` production routes/auth; reactivate `_archived/apps-desktop` or `_archived/crates`; repair root Cargo/pnpm manifests; change CI; or otherwise implement R2.
+This Accepted ADR **must not** be used as justification to: create `apps/desktop/**` or Rust crates; install Tauri/Rust toolchains for production cutover; add Tauri commands or capability files; implement IPC; mediate filesystem/process/secrets/network; wire OpenMed/sidecars; modify `afia-ui` production routes/auth; reactivate `_archived/apps-desktop` or `_archived/crates`; repair root Cargo/pnpm manifests; change CI; or otherwise implement R2 without separate founder execution authorization.
 
 ---
 

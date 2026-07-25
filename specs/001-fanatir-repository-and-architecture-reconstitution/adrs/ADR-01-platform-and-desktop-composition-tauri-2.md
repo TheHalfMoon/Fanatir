@@ -4,29 +4,34 @@
 | --- | --- |
 | **ADR** | ADR-01 |
 | **Title** | Platform and Desktop Composition (Tauri 2) |
-| **Status** | **Proposed** (draft only) |
+| **Status** | **Accepted** (T030 R1 architecture gate) |
 | **Task origin** | T013 |
 | **Acceptance gate** | **T030** (with ADR-15, ADR-02, and ADR-06 per Tasks 001 / Plan R1–R2 entry) |
 | **Feature** | `001-fanatir-repository-and-architecture-reconstitution` |
-| **Constraining draft** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Proposed; Decision A direction) |
-| **Architecture authority of this file** | **NO** — until accepted at T030 |
+| **Constraining ADR** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Accepted at T030; Decision A direction) |
+| **T030 founder decision** | **Accepted** — R1 architecture gate (`Yes — R1 architecture gate`); Tier A review Pending |
+| **Architecture authority of this file** | **YES** — architecture governance only (T030); does **not** authorize implementation |
 | **Implementation authorization** | **NO** |
 
 ```text
-This document is a planning draft and is not accepted architecture authority.
+Status: Accepted (T030 R1 architecture gate)
+Architecture authority: YES (governance only)
+Implementation authorization: NO
+T031 / R2 / apps/desktop / Tauri cutover: NOT authorized by this status alone
+Independent Tier A — R1 architecture gate: Pending
 ```
 
 ```text
 Completed ADR drafting task ≠ architecture acceptance
-T013 completion ≠ T030 acceptance
-ADR-15 remains Proposed and does not accept Tauri by itself
+T013 completion ≠ T030 acceptance (T030 founder decision now recorded)
+Accepted ADR-15 + ADR-01 ≠ automatic Tauri/desktop implementation
 ```
 
 ```text
-No production implementation is authorized by this draft.
+No production implementation is authorized by this Accepted status alone.
 ```
 
-This draft **must not** be used as justification to: create `apps/desktop/**`; install Tauri/Rust toolchains for production cutover; modify `afia-ui` production routes/auth; reactivate `_archived/apps-desktop`; repair root Cargo/pnpm manifests; change CI; introduce updater signing keys; or otherwise implement R2.
+This Accepted ADR **must not** be used as justification to: create `apps/desktop/**`; install Tauri/Rust toolchains for production cutover; modify `afia-ui` production routes/auth; reactivate `_archived/apps-desktop`; repair root Cargo/pnpm manifests; change CI; introduce updater signing keys; or otherwise implement R2 without separate founder execution authorization.
 
 ---
 

@@ -4,30 +4,34 @@
 | --- | --- |
 | **ADR** | ADR-15 |
 | **Title** | Rust-First Polyglot Runtime and Language Authority |
-| **Status** | **Proposed** (draft only) |
+| **Status** | **Accepted** (T030 R1 architecture gate) |
 | **Task origin** | T012 |
 | **Acceptance gate** | **T030** (with the R1 ADR package required by Plan/Tasks) |
 | **Feature** | `001-fanatir-repository-and-architecture-reconstitution` |
 | **Related founder decision** | Decision A (Rust-first, polyglot-at-the-edges) — **ratified direction** in accepted Plan 001 |
-| **Architecture authority of this file** | **NO** — until accepted at T030 |
+| **T030 founder decision** | **Accepted** — R1 architecture gate (`Yes — R1 architecture gate`); Tier A review Pending |
+| **Architecture authority of this file** | **YES** — architecture governance only (T030); does **not** authorize implementation |
 | **Implementation authorization** | **NO** |
 
 ```text
-This document is a planning draft. It reflects the founder-ratified Rust-first
-direction (Decision A) but does not become accepted architecture authority until T030.
+Status: Accepted (T030 R1 architecture gate)
+Architecture authority: YES (governance only)
+Implementation authorization: NO
+T031 / R2 / source / schema / codegen / migration / Supabase / PHI / Spec 002: NOT authorized by this status alone
+Independent Tier A — R1 architecture gate: Pending
 ```
 
 ```text
-Founder-ratified direction ≠ accepted ADR document
-Draft ADR ≠ accepted architecture authority
-T012 completion ≠ T030 acceptance
+Founder-ratified direction ≠ automatic implementation
+Accepted ADR ≠ T031 or R2 execution authorization
+T012 completion ≠ T030 acceptance (T030 founder decision now recorded)
 ```
 
 ```text
-No production implementation is authorized by this draft.
+No production implementation is authorized by this Accepted status alone.
 ```
 
-This draft **must not** be used as justification to: modify production or archived code; introduce Rust or Tauri dependencies; change build tooling; delete existing implementations; create migrations; or commence repository restructuring.
+This Accepted ADR **must not** be used as justification to: modify production or archived code; introduce Rust or Tauri dependencies; change build tooling; delete existing implementations; create migrations; commence repository restructuring; or begin T031/R2 without separate founder execution authorization.
 
 ---
 

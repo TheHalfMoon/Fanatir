@@ -4,34 +4,37 @@
 | --- | --- |
 | **ADR** | ADR-14 |
 | **Title** | Security and Data-Classification Enforcement |
-| **Status** | **Proposed** (draft only) |
+| **Status** | **Reviewed** (T030 R1 architecture gate; not Accepted) |
 | **Task origin** | T026 |
 | **Acceptance / review posture** | Tier A — security/classification ADR after drafting. **T030** mandatory Accepted set is ADR-15/01/02/06 only; ADR-14 **is** listed in T030’s explicit Reviewed-or-Accepted group (04/05/07/08/09/10/14). Downstream **T038** requires ADR-14 **Accepted** for the classification enforcement seam; **T036** may use ADR-14 Reviewed or Accepted for audit-foundation planning; plan R3 entry lists ADR-14 among blocking ADRs; **T060** depends on T026 (+T025, T055). Exact Reviewed-versus-Accepted progression remains an explicit ambiguity where sources differ. |
 | **Feature** | `001-fanatir-repository-and-architecture-reconstitution` |
 | **Required gate (tasks.md)** | Decision C/D |
 | **Planning dependency (plan.md)** | Constitution, **ADR-15**, Decision C/D — PHI egress + plugin permissions in Rust; signing custody for distribution (security-relevant overlap with Decision D / ADR-13) |
 | **Dependencies (tasks.md)** | T012, T018, T019 |
-| **Constraining drafts** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Proposed); [ADR-02](./ADR-02-rust-trusted-host-boundary.md) (Proposed); [ADR-04](./ADR-04-shared-primitive-ownership-and-versioning.md) (Proposed); [ADR-05](./ADR-05-artifact-revision-run-storage.md) (Proposed); [ADR-06](./ADR-06-worker-and-ipc-contracts.md) (Proposed); [ADR-07](./ADR-07-supabase-adapter-and-local-first-boundary.md) (Proposed); [ADR-08](./ADR-08-fehrest-integration-and-release-model.md) (Proposed); [ADR-09](./ADR-09-deepmed-integration-and-openmed-runtime-fork-boundary.md) (Proposed); [ADR-10](./ADR-10-commandf-ownership-and-process-boundary.md) (Proposed); [ADR-11](./ADR-11-auth-and-session-preservation.md) (Proposed); [ADR-12](./ADR-12-technical-afia-to-fanatir-rename-strategy.md) (Proposed); [ADR-13](./ADR-13-first-vertical-slice-packaging.md) (Proposed) |
-| **Related drafts** | [ADR-01](./ADR-01-platform-and-desktop-composition-tauri-2.md) (Proposed); [ADR-03](./ADR-03-afia-ui-strangler-migration.md) (Proposed) |
+| **Constraining ADRs** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Accepted at T030); [ADR-02](./ADR-02-rust-trusted-host-boundary.md) (Accepted at T030); [ADR-04](./ADR-04-shared-primitive-ownership-and-versioning.md) (Reviewed at T030); [ADR-05](./ADR-05-artifact-revision-run-storage.md) (Reviewed at T030); [ADR-06](./ADR-06-worker-and-ipc-contracts.md) (Accepted at T030); [ADR-07](./ADR-07-supabase-adapter-and-local-first-boundary.md) (Reviewed at T030); [ADR-08](./ADR-08-fehrest-integration-and-release-model.md) (Reviewed at T030); [ADR-09](./ADR-09-deepmed-integration-and-openmed-runtime-fork-boundary.md) (Reviewed at T030); [ADR-10](./ADR-10-commandf-ownership-and-process-boundary.md) (Reviewed at T030); [ADR-11](./ADR-11-auth-and-session-preservation.md) (Proposed); [ADR-12](./ADR-12-technical-afia-to-fanatir-rename-strategy.md) (Proposed); [ADR-13](./ADR-13-first-vertical-slice-packaging.md) (Proposed) |
+| **Related ADRs** | [ADR-01](./ADR-01-platform-and-desktop-composition-tauri-2.md) (Accepted at T030); [ADR-03](./ADR-03-afia-ui-strangler-migration.md) (Proposed) |
 | **Planning evidence** | [spec.md](../spec.md) PHI posture / Q4 / exclusions; [plan.md](../plan.md) ADR-14 row / Decision C/D / secure-share / PHI-egress; [research.md](../research.md) Decision C / documents-crypto; Constitution Security and Privacy Doctrine ([constitution.md](../../../.specify/memory/constitution.md)); [data-model.md](../data-model.md) DataClassification / PolicyDecision / ExportManifest; [shared-primitives.md](../contracts/shared-primitives.md); [trusted-host-ipc.md](../contracts/trusted-host-ipc.md); [worker-runtime.md](../contracts/worker-runtime.md); [tasks.md](../tasks.md) T026 / T012 / T018 / T019 / T030 / T036 / T038 / T054 / T060 |
-| **Architecture authority of this file** | **NO** — until a valid stage-gate acceptance action records Accepted |
+| **T030 founder decision** | **Reviewed** — R1 architecture gate; not Accepted; does **not** authorize classified-data or PHI implementation; T028 freeze preserved |
+| **Architecture authority of this file** | **NO** — Reviewed at T030; Accepted required before classified-data / PHI-egress implementation |
 | **Implementation authorization** | **NO** |
-| **PHI / classification / egress / audit authorization** | **NO** — this draft defines enforcement strategy principles only |
+| **PHI / classification / egress / audit authorization** | **NO** — Reviewed status does not authorize PHI handling |
 
 ```text
-This document is a planning draft and is not accepted architecture authority.
+Status: Reviewed (T030 R1 architecture gate; not Accepted)
+Architecture authority: NO (Reviewed ≠ Accepted)
+Implementation authorization: NO
+PHI / classified-data / egress implementation: NOT authorized
+T028 documents-crypto freeze: preserved
+Independent Tier A — R1 architecture gate: Pending
 ```
 
 ```text
-Status: Proposed
 Draft ADR ≠ architecture acceptance
-T026 completion ≠ T030 acceptance
-Passing Tier A review ≠ Accepted
-tasks.md founder-acceptance field for T026: No — draft only
-Founder acceptance of a draft work product ≠ architecture acceptance
+T026 completion ≠ T030 acceptance (T030 founder Reviewed decision now recorded)
+Passing Tier A review of a draft ≠ Accepted
 Decision C/D ≠ permission to transmit PHI or configure signing keys
-data-model.md DataClassification values = minimum planning values ≠ final published schema
-ADR-15 / ADR-01 / ADR-02 / ADR-03 / ADR-04 / ADR-05 / ADR-06 / ADR-07 / ADR-08 / ADR-09 / ADR-10 / ADR-11 / ADR-12 / ADR-13 remain Proposed and non-authoritative
+Reviewed ≠ Accepted for classified-data or PHI-egress implementation
+ADR-03 / ADR-11 / ADR-12 / ADR-13 remain Proposed
 ```
 
 ```text
@@ -602,14 +605,14 @@ No real PHI examples are embedded in this draft.
 | Item | Value |
 | --- | --- |
 | Created by | T026 draft authoring |
-| Status | Proposed |
+| Status | Reviewed (T030 R1 architecture gate; not Accepted) |
 | Supersedes | None |
 | Superseded by | None |
-| Next expected actions | Tier A independent review; T027 planning-schema alignment under its gate; T036/T038 only under their ADR-14 state requirements; no real PHI handling under Spec 001 without later authorization |
+| Next expected actions | Tier A R1 gate review of T030 recording; T036/T038 only under their ADR-14 state requirements; no real PHI handling under Spec 001 without later authorization |
 
 ```text
-End of ADR-14 draft.
-Status: Proposed
+End of ADR-14.
+Status: Reviewed (T030 R1 architecture gate; not Accepted)
 Implementation authorization: NO
 PHI / classification / egress / audit authorization: NO
 ```

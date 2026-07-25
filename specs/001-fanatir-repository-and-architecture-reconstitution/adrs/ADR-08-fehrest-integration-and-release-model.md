@@ -4,32 +4,34 @@
 | --- | --- |
 | **ADR** | ADR-08 |
 | **Title** | Fehrest Integration and Release Model |
-| **Status** | **Proposed** (draft only) |
+| **Status** | **Reviewed** (T030 R1 architecture gate; not Accepted) |
 | **Task origin** | T020 |
 | **Acceptance / review posture** | Tier A independent review after drafting; **T030** expects ADR-08 listed **Reviewed or Accepted** (not automatically Accepted; **not** in the mandatory Accepted set that opens R2). Fehrest implementation work such as **T044+** requires ADR-08 **Accepted**; **T050** requires ADR-08 / ADR-09 / ADR-05 **Accepted** |
 | **Feature** | `001-fanatir-repository-and-architecture-reconstitution` |
 | **Required gate (tasks.md)** | ADR-15; Q5 |
 | **Planning dependency (plan.md)** | Q5, P3, ADR-15 |
-| **Constraining drafts** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Proposed); [ADR-02](./ADR-02-rust-trusted-host-boundary.md) (Proposed); [ADR-04](./ADR-04-shared-primitive-ownership-and-versioning.md) (Proposed); [ADR-05](./ADR-05-artifact-revision-run-storage.md) (Proposed); [ADR-06](./ADR-06-worker-and-ipc-contracts.md) (Proposed); [ADR-07](./ADR-07-supabase-adapter-and-local-first-boundary.md) (Proposed) |
-| **Related drafts** | [ADR-01](./ADR-01-platform-and-desktop-composition-tauri-2.md) (Proposed); [ADR-03](./ADR-03-afia-ui-strangler-migration.md) (Proposed) |
+| **Constraining ADRs** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Accepted at T030); [ADR-02](./ADR-02-rust-trusted-host-boundary.md) (Accepted at T030); [ADR-04](./ADR-04-shared-primitive-ownership-and-versioning.md) (Reviewed at T030); [ADR-05](./ADR-05-artifact-revision-run-storage.md) (Reviewed at T030); [ADR-06](./ADR-06-worker-and-ipc-contracts.md) (Accepted at T030); [ADR-07](./ADR-07-supabase-adapter-and-local-first-boundary.md) (Reviewed at T030) |
+| **Related ADRs** | [ADR-01](./ADR-01-platform-and-desktop-composition-tauri-2.md) (Accepted at T030); [ADR-03](./ADR-03-afia-ui-strangler-migration.md) (Proposed) |
 | **Planning evidence** | [spec.md](../spec.md) Q5 / repository map / memory ownership; [plan.md](../plan.md) ADR-08 row / R3 Fehrest order; [research.md](../research.md) R10 / P3; [fehrest-integration.md](../contracts/fehrest-integration.md); [data-model.md](../data-model.md); [shared-primitives.md](../contracts/shared-primitives.md); [trusted-host-ipc.md](../contracts/trusted-host-ipc.md); [worker-runtime.md](../contracts/worker-runtime.md); [tasks.md](../tasks.md) T020 / T030 / T044–T047 / T050 |
-| **Architecture authority of this file** | **NO** — until a valid stage-gate acceptance action records Accepted |
+| **T030 founder decision** | **Reviewed** — R1 architecture gate; not Accepted; Fehrest product stage remains separately gated |
+| **Architecture authority of this file** | **NO** — Reviewed at T030; Accepted required before Fehrest implementation |
 | **Implementation authorization** | **NO** |
 
 ```text
-This document is a planning draft and is not accepted architecture authority.
+Status: Reviewed (T030 R1 architecture gate; not Accepted)
+Architecture authority: NO (Reviewed ≠ Accepted)
+Implementation authorization: NO
+Fehrest implementation: NOT authorized
+Independent Tier A — R1 architecture gate: Pending
 ```
 
 ```text
-Status: Proposed
 Draft ADR ≠ architecture acceptance
-T020 completion ≠ T030 acceptance
-Passing Tier A review ≠ Accepted
-tasks.md founder-acceptance field for T020: No — draft only
-Founder acceptance of a draft work product ≠ architecture acceptance
+T020 completion ≠ T030 acceptance (T030 founder Reviewed decision now recorded)
+Passing Tier A review of a draft ≠ Accepted
 Founder-ratified Q5 ≠ Accepted ADR-08
-P3 is planning research resolution ≠ Accepted ADR-08
-ADR-15 / ADR-01 / ADR-02 / ADR-03 / ADR-04 / ADR-05 / ADR-06 / ADR-07 remain Proposed and non-authoritative
+Reviewed ≠ Accepted for Fehrest product work
+ADR-03 remains Proposed
 ```
 
 ```text
@@ -556,7 +558,7 @@ Authoritative audit ownership remains with the Trusted Host / **ADR-02** and lat
 | IPC | ADR-06 retains envelopes/protocols |
 | Clinical | Fehrest discovery ≠ clinical authority; DeepMed → ADR-09 |
 | Providers / Graphify | Not selected / not imported |
-| Status | Proposed only |
+| Status | Reviewed (T030; not Accepted) |
 
 ---
 

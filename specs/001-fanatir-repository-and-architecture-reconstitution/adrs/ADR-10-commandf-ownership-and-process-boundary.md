@@ -4,32 +4,35 @@
 | --- | --- |
 | **ADR** | ADR-10 |
 | **Title** | commandF Ownership and Process Boundary |
-| **Status** | **Proposed** (draft only) |
+| **Status** | **Reviewed** (T030 R1 architecture gate; not Accepted) |
 | **Task origin** | T022 |
 | **Acceptance / review posture** | Tier C — normal verification after drafting; **T030** expects ADR-10 listed **Reviewed or Accepted** (not automatically Accepted; **not** in the mandatory Accepted set that opens R2). commandF implementation such as **T051** requires ADR-10 **Accepted** and **ADR-15** |
 | **Feature** | `001-fanatir-repository-and-architecture-reconstitution` |
 | **Required gate (tasks.md)** | ADR-15 |
 | **Planning dependency (plan.md)** | Constitution, ADR-15 |
-| **Constraining drafts** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Proposed); [ADR-02](./ADR-02-rust-trusted-host-boundary.md) (Proposed); [ADR-04](./ADR-04-shared-primitive-ownership-and-versioning.md) (Proposed); [ADR-05](./ADR-05-artifact-revision-run-storage.md) (Proposed); [ADR-06](./ADR-06-worker-and-ipc-contracts.md) (Proposed); [ADR-07](./ADR-07-supabase-adapter-and-local-first-boundary.md) (Proposed); [ADR-08](./ADR-08-fehrest-integration-and-release-model.md) (Proposed); [ADR-09](./ADR-09-deepmed-integration-and-openmed-runtime-fork-boundary.md) (Proposed) |
-| **Related drafts** | [ADR-01](./ADR-01-platform-and-desktop-composition-tauri-2.md) (Proposed); [ADR-03](./ADR-03-afia-ui-strangler-migration.md) (Proposed) |
+| **Constraining ADRs** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Accepted at T030); [ADR-02](./ADR-02-rust-trusted-host-boundary.md) (Accepted at T030); [ADR-04](./ADR-04-shared-primitive-ownership-and-versioning.md) (Reviewed at T030); [ADR-05](./ADR-05-artifact-revision-run-storage.md) (Reviewed at T030); [ADR-06](./ADR-06-worker-and-ipc-contracts.md) (Accepted at T030); [ADR-07](./ADR-07-supabase-adapter-and-local-first-boundary.md) (Reviewed at T030); [ADR-08](./ADR-08-fehrest-integration-and-release-model.md) (Reviewed at T030); [ADR-09](./ADR-09-deepmed-integration-and-openmed-runtime-fork-boundary.md) (Reviewed at T030) |
+| **Related ADRs** | [ADR-01](./ADR-01-platform-and-desktop-composition-tauri-2.md) (Accepted at T030); [ADR-03](./ADR-03-afia-ui-strangler-migration.md) (Proposed) |
 | **Planning evidence** | [spec.md](../spec.md) FR-013 / inventory / Alpha journey; [plan.md](../plan.md) ADR-10 row / golden sequence; [research.md](../research.md) R0 bridges / golden journey; Constitution commandF Principles ([constitution.md](../../../.specify/memory/constitution.md)); [commandf.md](../contracts/commandf.md); [R0-python-services.md](../../../docs/program-memory/baseline/R0-python-services.md); [data-model.md](../data-model.md); [shared-primitives.md](../contracts/shared-primitives.md); [trusted-host-ipc.md](../contracts/trusted-host-ipc.md); [worker-runtime.md](../contracts/worker-runtime.md); [tasks.md](../tasks.md) T022 / T012 / T030 / T051 |
-| **Architecture authority of this file** | **NO** — until a valid stage-gate acceptance action records Accepted |
+| **T030 founder decision** | **Reviewed** — R1 architecture gate; not Accepted; accepted commandF product strategy does **not** automatically Accept ADR-10; commandF / FHIR runtime remains separately gated |
+| **Architecture authority of this file** | **NO** — Reviewed at T030; Accepted required before commandF implementation |
 | **Implementation authorization** | **NO** |
 
 ```text
-This document is a planning draft and is not accepted architecture authority.
+Status: Reviewed (T030 R1 architecture gate; not Accepted)
+Architecture authority: NO (Reviewed ≠ Accepted)
+Implementation authorization: NO
+commandF / FHIR runtime / external validation: NOT authorized
+Independent Tier A — R1 architecture gate: Pending
 ```
 
 ```text
-Status: Proposed
 Draft ADR ≠ architecture acceptance
-T022 completion ≠ T030 acceptance
-Passing Tier C review ≠ Accepted
-tasks.md founder-acceptance field for T022: No — draft only
-Founder acceptance of a draft work product ≠ architecture acceptance
+T022 completion ≠ T030 acceptance (T030 founder Reviewed decision now recorded)
+Passing Tier C review of a draft ≠ Accepted
 Constitution commandF Principles ≠ Accepted ADR-10
-commandf.md is planning contract evidence ≠ Accepted ADR-10
-ADR-15 / ADR-01 / ADR-02 / ADR-03 / ADR-04 / ADR-05 / ADR-06 / ADR-07 / ADR-08 / ADR-09 remain Proposed and non-authoritative
+commandF strategy ≠ automatic ADR-10 Accepted
+Reviewed ≠ Accepted for commandF product work
+ADR-03 remains Proposed
 ```
 
 ```text
@@ -576,13 +579,13 @@ This draft **proposes** planning postures only. It does **not** claim implemente
 | Item | Value |
 | --- | --- |
 | Created by | T022 draft authoring |
-| Status | Proposed |
+| Status | Reviewed (T030 R1 architecture gate; not Accepted) |
 | Supersedes | None |
 | Superseded by | None |
-| Next expected actions | Tier C normal verification; later T030 listing; T051 only after ADR-10 Accepted |
+| Next expected actions | Tier A R1 gate review of T030 recording; T051 only after separate later ADR-10 Accepted |
 
 ```text
-End of ADR-10 draft.
-Status: Proposed
+End of ADR-10.
+Status: Reviewed (T030 R1 architecture gate; not Accepted)
 Implementation authorization: NO
 ```

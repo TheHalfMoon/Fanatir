@@ -4,26 +4,29 @@
 | --- | --- |
 | **ADR** | ADR-04 |
 | **Title** | Shared Primitive Ownership and Versioning |
-| **Status** | **Proposed** (draft only) |
+| **Status** | **Reviewed** (T030 R1 architecture gate; not Accepted) |
 | **Task origin** | T016 |
 | **Acceptance / review posture** | Tier A independent review after drafting; **T030** expects ADR-04 listed **Reviewed or Accepted** (not automatically Accepted; not in the mandatory Accepted set that opens R2) |
 | **Feature** | `001-fanatir-repository-and-architecture-reconstitution` |
-| **Constraining drafts** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Proposed) |
+| **Constraining ADRs** | [ADR-15](./ADR-15-rust-first-polyglot-runtime.md) (Accepted at T030) |
 | **Planning evidence** | [shared-primitives.md](../contracts/shared-primitives.md); [data-model.md](../data-model.md); [research.md](../research.md) P2; [plan.md](../plan.md) ADR roadmap |
-| **Architecture authority of this file** | **NO** — until a valid stage-gate acceptance action records Accepted |
+| **T030 founder decision** | **Reviewed** — R1 architecture gate; not Accepted; schema publication / shared-package implementation remain later-gated |
+| **Architecture authority of this file** | **NO** — Reviewed at T030; Accepted required before implementation domains that gate on this ADR |
 | **Implementation authorization** | **NO** |
 
 ```text
-This document is a planning draft and is not accepted architecture authority.
+Status: Reviewed (T030 R1 architecture gate; not Accepted)
+Architecture authority: NO (Reviewed ≠ Accepted)
+Implementation authorization: NO
+Independent Tier A — R1 architecture gate: Pending
 ```
 
 ```text
-Status: Proposed
 Draft ADR ≠ architecture acceptance
-T016 completion ≠ T030 acceptance
-Passing Tier A review ≠ Accepted
-Founder acceptance of a draft work product ≠ architecture acceptance
-ADR-15 / ADR-01 / ADR-02 / ADR-03 remain Proposed and non-authoritative
+T016 completion ≠ T030 acceptance (T030 founder Reviewed decision now recorded)
+Passing Tier A review of a draft ≠ Accepted
+Reviewed ≠ Accepted for schema publication or shared-package implementation
+ADR-03 remains Proposed
 ```
 
 ```text
