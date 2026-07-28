@@ -38,3 +38,13 @@ Thumbs.db
 /logs
 
 afia-ui/.env
+
+# Obsidian volatile state (keep Markdown + stable settings trackable)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.trash/
+
+# Graphify derived indexes (rebuildable; do not commit unless authorized)
+graphify-out/
+**/graphify-out/
