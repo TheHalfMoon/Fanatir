@@ -1,0 +1,22 @@
+# Fanatir desktop shell — nested workspace so Cargo.lock stays under apps/desktop/**
+# (root Cargo.lock does not exist and must not be created without separate authorization).
+
+[workspace]
+resolver = "2"
+members = ["."]
+
+[package]
+name = "fanatir-desktop"
+version = "0.0.0"
+description = "Minimal Tauri 2 shell (T031). WebView untrusted. No Trusted Host / IPC / workers."
+edition = "2021"
+publish = false
+
+[build-dependencies]
+tauri-build = { version = "=2.6.3", features = [] }
+
+[dependencies]
+tauri = { version = "=2.11.5", features = [] }
+
+[profile.release]
+panic = "abort"

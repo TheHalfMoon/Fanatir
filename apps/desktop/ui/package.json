@@ -1,0 +1,15 @@
+{
+  "name": "@fanatir/desktop-ui",
+  "private": true,
+  "version": "0.0.0",
+  "description": "T031 orchestration only — consumes afia-ui; no application UI source.",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm --dir ../../../afia-ui run build",
+    "tauri": "tauri",
+    "tauri:dev": "node ./run-tauri-dev.mjs"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.11.4"
+  }
+}
