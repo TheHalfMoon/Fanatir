@@ -11,14 +11,40 @@
 - All privileged invokes are subject to Capability Gateway / PolicyDecision **in Rust**.
 - Payloads are JSON-serializable; large binaries use Artifact URIs, not IPC bodies.
 - Non-Rust workers access host capabilities only through bounded versioned IPC; they MUST NOT mutate Artifacts directly.
+- This document remains a **planning contract**, not a production-approved external API. ADR-06 IPC implementation is **not** complete.
+
+## T033 Host FS semantic operations (internal Rust-only)
+
+T033 defines the semantic Host operations `project.open` and `project.create` as **internal Rust methods** on an immutable `ProjectFilesystemAuthority`. In T033 they are:
+
+- **not** WebView-callable Tauri commands;
+- **not** registered invoke handlers;
+- **not** a stable or versioned IPC wire schema;
+- **not** capability-granted to the WebView.
+
+Root model for T033:
+
+- one immutable permitted local filesystem root per `ProjectFilesystemAuthority` instance;
+- project paths are validated **relative** requests under that root;
+- `project.create` creates **only** an empty project-root directory (no scaffold files);
+- Workspace root and Project–Workspace relationships remain **undefined**;
+- containment is bounded lexical + canonical + Windows reparse-point denial for this single-root open/create model;
+- **TOCTOU limitation:** checks are not race-free; OS-handle-level hardening is required before production security claims. This is **not** a production-grade sandbox or compliance certification claim.
+
+Deferred beyond T033 (still unauthorized here):
+
+- `fs.read_text` / `fs.write_text`;
+- delete, rename, move, copy, listing, watch, and unrestricted filesystem operations;
+- Artifact Store filesystem operations;
+- IPC transport, request/response envelopes, versioning, invoke registration, and capability exposure (**owned by T034**).
 
 ## Commands (minimum)
 
 | Command | Purpose | Notes |
 | --- | --- | --- |
-| `project.open` | Open existing project root | Host validates path scope |
-| `project.create` | Create project scaffold | Local-first |
-| `fs.read_text` / `fs.write_text` | Mediated file IO within project | Deny escape |
+| `project.open` | Open existing project root | T033: internal Rust semantic op; Host validates path scope. T034: transport/capability. |
+| `project.create` | Create empty project-root directory | T033: internal Rust; creates one directory only (no scaffold). T034: transport/capability. |
+| `fs.read_text` / `fs.write_text` | Mediated file IO within project | Deferred; not implemented by T033. Deny escape when later authorized. |
 | `secrets.get` / `secrets.set` | Local secret storage | OS-backed |
 | `worker.spawn` | Start sidecar (Python/R/SQL Lab, Fehrest, DeepMed, optional Go) | Rust-supervised; see `worker-runtime.md` |
 | `worker.status` / `worker.stop` | Lifecycle | Crash → failed Run; restartable |
@@ -43,3 +69,4 @@
 - Least-privilege Tauri capabilities ACL.
 - Reject unknown commands; deny by default.
 - Classification checks before cloud adapter calls.
+- T033 does not expand WebView-callable host commands or capability grants.
