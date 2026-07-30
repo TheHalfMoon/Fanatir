@@ -107,7 +107,7 @@ React/TypeScript: UI/presentation only. Python: bounded supervised workers. R/SQ
 
 - [x] T031 [R2] Create minimal Tauri 2 desktop shell loading afia-ui client — `apps/desktop/**; afia-ui/client/** (consume only)`
 - [x] T032 [R2] Implement Rust Trusted Host skeleton (project/workspace authority stubs) — `apps/desktop/src-tauri/**`
-- [ ] T033 [R2] Implement bounded filesystem/project open/create via Rust mediation — `apps/desktop/src-tauri/**; specs/001-fanatir-repository-and-architecture-reconstitution/contracts/trusted-host-ipc.md`
+- [x] T033 [R2] Implement bounded filesystem/project open/create via Rust mediation — `apps/desktop/src-tauri/**; specs/001-fanatir-repository-and-architecture-reconstitution/contracts/trusted-host-ipc.md`
 - [ ] T034 [R2] Implement versioned secure IPC (commands/events/channels) foundation — `apps/desktop/src-tauri/**; specs/001-fanatir-repository-and-architecture-reconstitution/contracts/trusted-host-ipc.md`
 - [ ] T035 [R2] Implement worker supervision foundation (spawn/status/stop/restart) — `apps/desktop/src-tauri/**`
 - [ ] T036 [R2] Implement audit event foundation in Rust — `apps/desktop/src-tauri/**`

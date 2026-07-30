@@ -4,13 +4,15 @@ Verified local facts only. Unresolved items are marked explicitly.
 
 ## Fanatir
 
-- Branch: `feat/r2-t032-trusted-host-skeleton` (local only; no upstream; nothing pushed; no PR). Canonical governance worktree `docs/f0-planning-memory-bootstrap` remains at `b7a01c9f5bb05b3b639880a836fa01ba7f44bb00`.
+- Branch: `docs/r2-t033-post-merge-governance-closeout` (local only; no upstream; nothing pushed; no PR). Canonical main (pre-closeout): `04e9120c0e9350daff68238e0e49e2c5d7e5c9d9` (tree `9347d5c245ca207b6bd425ee47c633679b1322be`). Canonical governance worktree `docs/f0-planning-memory-bootstrap` remains at `b7a01c9f5bb05b3b639880a836fa01ba7f44bb00`.
 - Spec Kit: `specs/001-fanatir-repository-and-architecture-reconstitution`
 - Governance: Constitution v1.0.0; accepted Spec 001; Plan 001; Tasks 001
 - **T001–T029**: R1 drafting/freeze/charter work products authored and locally committed through T029 (`2cc5e8d312210f30a751006dda6143d6d126ff43`). Historical `tasks.md` checklist boxes for T012–T030 remain unchecked (administrative bookkeeping only; not a reversal of T030/R1 closeout).
 - **T030**: Complete.
 - **T031**: Complete.
 - **T032**: Complete.
+- **T033**: Complete.
+- **T034**: Not started. Not authorized.
 
 ### T030 / R1 architecture-gate closeout (canonical)
 
@@ -229,8 +231,8 @@ Rollback remains removal or reversion of the T031 implementation commit/package 
 T032 status: Complete
 T032 implementation: Locally committed and independently verified
 T032 administrative closeout: Complete
-R2 status: Entered through T032 only; no later R2 task started
-T033 status: Not authorized
+R2 status (historical at T032 closeout): Entered through T032 only; no later R2 task started
+T033 status (historical at T032 closeout; superseded by T033 closeout below): Not authorized
 ```
 
 | Field | Value |
@@ -264,7 +266,7 @@ apps/desktop/src-tauri/src/trusted_host/workspace.rs
 
 T032 implements only the type-only Trusted Host authority skeleton. It is **not** a functional Trusted Host. It exposes no WebView-callable host command, grants no permission, performs no filesystem or persistence operation, has no runtime host container or application state, and implements no IPC, worker/async orchestration, Supabase, authentication, PHI, Fehrest, DeepMed, or commandF behavior.
 
-T033 requires separate strict read-only contract recovery and a separate founder execution decision after recovery. No T033 branch, worktree, code, validation, stage, or commit is authorized by T032 closeout.
+Historical (T032-era; superseded): T033 required separate strict read-only contract recovery and a separate founder execution decision after recovery. No T033 branch, worktree, code, validation, stage, or commit was authorized by T032 closeout alone. T033 was later separately authorized, implemented, merged through PR #4, and administratively closed in the T033 closeout section below.
 
 #### T032 verification decisions
 
@@ -401,6 +403,70 @@ These notes and observations are **not** production approval and are **not** T03
 
 Rollback remains removal or reversion of the five T032 host modules before publication.
 
+### T033 / R2 bounded project-filesystem authority closeout (canonical)
+
+```text
+T033 status: Complete
+T033 implementation: Merged through PR #4 and independently verified
+T033 administrative closeout: Complete (this commit)
+  meaning: authored by this closeout commit; canonical only when this closeout commit is merged into main
+R2 status: Entered through T031—T033; T034 not started
+T034 status: Not authorized
+```
+
+| Field | Value |
+| --- | --- |
+| **Subject** | Implement bounded filesystem/project open/create via Rust mediation |
+| **Stage** | R2 |
+| **PR** | #4 (MERGED) |
+| **Merge** | `04e9120c0e9350daff68238e0e49e2c5d7e5c9d9` |
+| **Implementation** | `e151118c6885908008f1e5ba00fd7314af14cf69` |
+| **Implementation parent** | `135da05c204bf5a17797e7266f0878dc0999f478` |
+| **Implementation tree** | `5f8f0408c59f3b43b428aefae7b1a462e79d5941` |
+| **Main tree** | `9347d5c245ca207b6bd425ee47c633679b1322be` |
+| **Paths** | 6 |
+| **Contribution** | +1241 / -7 |
+| **PR CI** | `30512741961` — five placeholder jobs passed |
+| **Main Push CI** | `30515891138` — five placeholder jobs passed |
+| **Tier A** | APPROVE WITH NON-BLOCKING NOTES |
+| **BLOCKER / MAJOR** | 0 / 0 |
+| **Human review** | Independent external Tier A; no GitHub approval submitted |
+| **Checklist** | T033 checked in `tasks.md`; T034 remains unchecked |
+| **Founder work-product acceptance** | No |
+
+T033 paths:
+
+```text
+apps/desktop/src-tauri/src/trusted_host/filesystem/authority.rs
+apps/desktop/src-tauri/src/trusted_host/filesystem/error.rs
+apps/desktop/src-tauri/src/trusted_host/filesystem/mod.rs
+apps/desktop/src-tauri/src/trusted_host/filesystem/path.rs
+apps/desktop/src-tauri/src/trusted_host/mod.rs
+specs/001-fanatir-repository-and-architecture-reconstitution/contracts/trusted-host-ipc.md
+```
+
+T033 implements bounded filesystem/project open/create via Rust mediation under the Trusted Host. It is **not** a production-grade filesystem sandbox. Placeholder hosted CI does not establish cargo, filesystem-security, contract, or production correctness. TOCTOU remains a documented limitation. Symlink end-to-end coverage may be environment-dependent. T033 completion does **not** authorize T034.
+
+Limitations (durable):
+
+```text
+TOCTOU: documented limitation
+symlink/junction evidence: bounded; end-to-end symlink tests may be environment-dependent
+production sandbox: not claimed
+hosted PR CI: placeholder-only
+main Push CI: placeholder-only
+real S03-T06 checks: not implemented
+real S04-T02 contract validation: not implemented
+GitHub approval: none submitted
+T034 authorization: not granted
+```
+
+Authority distinction:
+
+```text
+T033 Complete ≠ production-grade filesystem sandbox ≠ T034 authorization
+```
+
 ### Plan R1 blocking-matrix checklist (canonical)
 
 | Gate item | Recorded state |
@@ -411,13 +477,14 @@ Rollback remains removal or reversion of the five T032 host modules before publi
 | ADR-06 Accepted | **Accepted** |
 | ADR-04 / 05 / 07 / 08 / 09 / 10 / 14 Reviewed or Accepted | **Reviewed** |
 | ADR-03 / 11 / 12 / 13 | **Proposed** |
-| R2 implementation commits | T031 shell (`eb6ca9cbcf081d1d2cbf0a8ac30e23104da83103`); T032 authority skeleton (`d0be7345e68cc424baaa1a80b82e45f73a71ade8`); no later R2 task started |
+| R2 implementation commits | T031 shell (`eb6ca9cbcf081d1d2cbf0a8ac30e23104da83103`); T032 authority skeleton (`d0be7345e68cc424baaa1a80b82e45f73a71ade8`); T033 bounded filesystem (`e151118c6885908008f1e5ba00fd7314af14cf69`, merge `04e9120c0e9350daff68238e0e49e2c5d7e5c9d9`); T034 not started |
 | Future Spec 002 | Charter only (T029); Spec 002 not created by T031 or T032 |
 | `documents-crypto` | Frozen (T028); no real patient / production PHI |
 
 ### Authority distinctions (current)
 
-- T032 Complete ≠ functional Trusted Host ≠ T033 authorization ≠ later R2 start
+- T032 Complete ≠ functional Trusted Host ≠ T033 authorization ≠ later R2 start (historical T032-era distinction; T033 later separately authorized and completed)
+- T033 Complete ≠ production-grade filesystem sandbox ≠ T034 authorization
 - Architecture-governance Accepted ≠ schema / codegen / migration / Supabase runtime / PHI / Spec 002 / packaging / release / production authorization
 - Reviewed ≠ Accepted for Artifact Store (ADR-05), Supabase adapter/migrations (ADR-07), classified-data/PHI-egress implementation (ADR-14), or Fehrest/DeepMed/commandF product stages (ADR-08/09/10)
 - Decision C remains ratified; T028 `documents-crypto` freeze remains in force; T029 Spec 002 charter remains charter-only (`002-supabase-local-first-and-migration-canonicalization`; no `specs/002*` implementation introduced by T032)
@@ -434,12 +501,10 @@ Rollback remains removal or reversion of the five T032 host modules before publi
 
 ## Remaining
 
-- Independently verify this three-file T032 administrative closeout authoring
-- Separately authorized normalized local closeout commit
-- Independent verification of that closeout commit
-- Only after a passing closeout verification, authorize strict read-only recovery of the canonical T033 contract
-- Obtain a separate founder T033 execution decision after recovery
-- Do not begin T033 merely because T032 is complete
+- Independently verify this three-file T033 administrative closeout authoring
+- Later independently verify the merged T033 governance-closeout commit on canonical main
+- Only after that verification passes, a separate founder decision may authorize strict read-only T034 planning — not T034 implementation
+- Do not begin T034 merely because T033 is complete
 - Separate later Accepted required for ADR-05 / ADR-07 / ADR-14 (and product ADRs) before their gated implementation domains
 - Spec 002 remains separately gated
 - Durable root-workspace reconciliation remains a separate authorized task
